@@ -21,19 +21,59 @@ env:
   DOMAIN: ai-term-hub.com
   HUGO_VERSION: '0.140.0'
   GITHUB_USER: wangdan197902-art
+  PYTHON_VERSION: '3.11'
+  # Agnes LLM 配置（用于内容生成，可选）
+  AGNES_LLM_MODEL: ${{ secrets.AGNES_LLM_MODEL }}
+  AGNES_LLM_BASE_URL: ${{ secrets.AGNES_LLM_BASE_URL }}
+  AGNES_LLM_API_KEY: ${{ secrets.AGNES_LLM_API_KEY }}
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
-        lang: [ar, cs, da, de, el, en, es, fi, fr, hu, id, it,
-               ja, ko, nl, no, pl, pt, ro, ru, sv, th, tr, vi, zh]
+        lang: [ar, cs, da, de, el, en, es, fi, fr, hu, id, it, ja, ko, nl, no, pl, pt, ro, ru, sv, th, tr, vi, zh]
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Python dependencies
+        run: pip install openai requests
+
+      - name: Generate tools data
+        run: python3 scripts/lib/tools_data.py
+
+      - name: Generate UI translations
+        run: python3 scripts/lib/i18n.py
+
+      - name: Generate Markdown pages for ${{ matrix.lang }}
+        run: |
+          # 只为支持的20个语种生成内容；5个扩展语种(cs, el, fi, hu, ro)创建占位内容
+          SUPPORTED_LANGS="ar da de en es fr id it ja ko nl no pl pt ru sv th tr vi zh"
+          if echo "$SUPPORTED_LANGS" | grep -qw "${{ matrix.lang }}"; then
+            echo "Generating content for ${{ matrix.lang }}..."
+            python3 scripts/generate_pages.py --all --lang ${{ matrix.lang }}
+          else
+            echo "语种 ${{ matrix.lang }} 不在内容生成支持列表中，创建占位内容"
+            mkdir -p content/${{ matrix.lang }}
+            cat > content/${{ matrix.lang }}/_index.md << 'EOF'
+          ---
+          title: "AI Tools Pricing"
+          description: "AI Tools Pricing - Coming Soon"
+          draft: false
+          ---
+          # AI Tools Pricing
+          This page is under construction.
+          EOF
+          fi
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
