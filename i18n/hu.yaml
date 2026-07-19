@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Ugrás a tartalomhoz"
+nav_home:
+  other: "Főoldal"
+nav_tools:
+  other: "Eszközök"
+nav_compare:
+  other: "Összehasonlítás"
+nav_guides:
+  other: "Útmutatók"
+nav_ranking:
+  other: "Rangsor"
+nav_faq:
+  other: "GYIK"
+search_title:
+  other: "Keresés"
+search_placeholder:
+  other: "AI eszközök, árak, útmutatók keresése..."
+search_empty:
+  other: "Nincs találat"
+search_results:
+  other: "találat"
+search_clear:
+  other: "Törlés"
+search_load_more:
+  other: "Több találat betöltése"
+search_label:
+  other: "Oldalon belüli keresés"
+search_submit:
+  other: "Keresés"
+404_message:
+  other: "Hoppá! A keresett oldal nem található."
+404_hint:
+  other: "Lehet, hogy áthelyezték, törölték vagy soha nem létezett."
+404_popular:
+  other: "Népszerű AI eszközök"
+back_to_home:
+  other: "Vissza a főoldalra"
+browse_all_tools:
+  other: "Összes eszköz böngészése"
+popular_categories:
+  other: "Népszerű"
+home_categories_title:
+  other: "Böngészés kategória szerint"
+home_recent_changes:
+  other: "Legutóbbi ár változások"
+home_popular_comparisons:
+  other: "Népszerű összehasonlítások"
+home_guides_title:
+  other: "Megtakarítási útmutatók"
+tools:
+  other: "eszköz"
+view_all_tools:
+  other: "Összes eszköz megtekintése"
+view_all_comparisons:
+  other: "Összes összehasonlítás megtekintése"
+view_all_guides:
+  other: "Összes útmutató megtekintése"
+view_pricing:
+  other: "Árak megtekintése"
+reading_time:
+  other: "perc olvasás"
+free_tier:
+  other: "Ingyenes verzió"
+free_to_use:
+  other: "Ingyenesen használható"
+month:
+  other: "hó"
+visit_official:
+  other: "Hivatalos webhely meglátogatása"
+tags:
+  other: "Címkék"
+other_languages:
+  other: "Egyéb nyelvek"
+previous:
+  other: "Előző"
+next:
+  other: "Következő"
+footer_explore:
+  other: "Felfedezés"
+footer_company:
+  other: "Cég"
+footer_legal:
+  other: "Jogi"
+footer_languages:
+  other: "Nyelvek"
+footer_about:
+  other: "Rólunk"
+footer_contact:
+  other: "Kapcsolat"
+footer_privacy:
+  other: "Adatvédelmi irányelvek"
+footer_ftc:
+  other: "FTC nyilatkozat"
+footer_price_disclaimer:
+  other: "Árfelelősségi nyilatkozat"
+footer_terms:
+  other: "Szolgáltatási feltételek"
+footer_disclaimer_text:
+  other: "A megjelenített árak és csomagok csak tájékoztató jellegűek és változhatnak. Vásárlás előtt mindig ellenőrizze a szolgáltató hivatalos weboldalán. Bizonyos linkekből affiliate jutalékot kaphatunk."
+footer_rights:
+  other: "Minden jog fenntartva."
+total_count:
+  other: "Összesen"
+prev_page:
+  other: "Előző"
+next_page:
+  other: "Következő"
+no_results:
+  other: "Még nincs elérhető tartalom."
+switch_language:
+  other: "Nyelv váltása"

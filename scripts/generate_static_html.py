@@ -443,10 +443,11 @@ def render_header(lang: str, current_section: str = "") -> str:
         (TYPE_RANKING, tr("ranking_title", lang)),
         (TYPE_FAQ, tr("faq_title", lang)),
     ]
-    nav_html = "\n            ".join(
-        f'<a href="{url_section(lang, ptype)}"{" class=\"active\"" if ptype == current_section else ""}>{escape(label)}</a>'
-        for ptype, label in nav_items
-    )
+    nav_links = []
+    for ptype, label in nav_items:
+        active_attr = ' class="active"' if ptype == current_section else ""
+        nav_links.append(f'<a href="{url_section(lang, ptype)}"{active_attr}>{escape(label)}</a>')
+    nav_html = "\n            ".join(nav_links)
     search = render_search_box(lang)
     lang_switch = render_language_switcher(lang, home)
 

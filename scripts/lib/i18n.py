@@ -1,7 +1,7 @@
-"""20 语种 UI 文案翻译表。
+"""25 语种 UI 文案翻译表。
 
 - LANG_MAP: 语言代码 → 语言名称（本地化）
-- UI_KEYS: UI key → {lang → 翻译}
+- UI_KEYS: UI key → {lang → 翻译}（未提供翻译的语种自动回退到 en）
 - 输出 data/ui_translations.json（Hugo 的 data/ 目录用于 JSON 数据）
 """
 from __future__ import annotations
@@ -13,7 +13,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = PROJECT_ROOT / "data"
 OUTPUT_FILE = DATA_DIR / "ui_translations.json"
 
-# 20 语种代码与本地化名称
+# 25 语种代码与本地化名称
+# 5 个扩展语种 (cs/el/fi/hu/ro) 的 UI 翻译未全部填充时，会回退到英文
 LANG_MAP: dict[str, str] = {
     "en": "English",
     "zh": "简体中文",
@@ -35,6 +36,12 @@ LANG_MAP: dict[str, str] = {
     "sv": "Svenska",
     "no": "Norsk",
     "da": "Dansk",
+    # 5 个扩展语种（之前为占位页，现已支持完整生成）
+    "cs": "Čeština",
+    "el": "Ελληνικά",
+    "fi": "Suomi",
+    "hu": "Magyar",
+    "ro": "Română",
 }
 
 SUPPORTED_LANGS = list(LANG_MAP.keys())

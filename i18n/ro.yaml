@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Sari la conținut"
+nav_home:
+  other: "Acasă"
+nav_tools:
+  other: "Instrumente"
+nav_compare:
+  other: "Compară"
+nav_guides:
+  other: "Ghiduri"
+nav_ranking:
+  other: "Clasament"
+nav_faq:
+  other: "Întrebări frecvente"
+search_title:
+  other: "Caută"
+search_placeholder:
+  other: "Caută instrumente AI, prețuri, ghiduri..."
+search_empty:
+  other: "Niciun rezultat găsit"
+search_results:
+  other: "rezultate găsite"
+search_clear:
+  other: "Șterge"
+search_load_more:
+  other: "Încarcă mai multe rezultate"
+search_label:
+  other: "Căutare pe site"
+search_submit:
+  other: "Caută"
+404_message:
+  other: "Hopa! Pagina pe care o căutați nu a fost găsită."
+404_hint:
+  other: "Ar fi putut fi mutată, ștearsă sau nu a existat niciodată."
+404_popular:
+  other: "Instrumente AI populare"
+back_to_home:
+  other: "Înapoi la pagina principală"
+browse_all_tools:
+  other: "Răsfoiește toate instrumentele"
+popular_categories:
+  other: "Populare"
+home_categories_title:
+  other: "Răsfoiește după categorie"
+home_recent_changes:
+  other: "Ultimele modificări de preț"
+home_popular_comparisons:
+  other: "Comparații populare"
+home_guides_title:
+  other: "Ghiduri de economisire"
+tools:
+  other: "instrumente"
+view_all_tools:
+  other: "Vezi toate instrumentele"
+view_all_comparisons:
+  other: "Vezi toate comparațiile"
+view_all_guides:
+  other: "Vezi toate ghidurile"
+view_pricing:
+  other: "Vezi prețurile"
+reading_time:
+  other: "min citire"
+free_tier:
+  other: "Versiune gratuită"
+free_to_use:
+  other: "Gratuit pentru utilizare"
+month:
+  other: "lună"
+visit_official:
+  other: "Vizitează site-ul oficial"
+tags:
+  other: "Etichete"
+other_languages:
+  other: "Alte limbi"
+previous:
+  other: "Anterior"
+next:
+  other: "Următor"
+footer_explore:
+  other: "Explorează"
+footer_company:
+  other: "Companie"
+footer_legal:
+  other: "Legal"
+footer_languages:
+  other: "Limbi"
+footer_about:
+  other: "Despre noi"
+footer_contact:
+  other: "Contact"
+footer_privacy:
+  other: "Politica de confidențialitate"
+footer_ftc:
+  other: "Divulgare FTC"
+footer_price_disclaimer:
+  other: "Disclaimer de preț"
+footer_terms:
+  other: "Termeni de serviciu"
+footer_disclaimer_text:
+  other: "Prețurile și planurile afișate sunt doar pentru referință și pot suferi modificări. Verificați întotdeauna pe site-ul oficial al furnizorului înainte de achiziție. Putem câștiga comisioane affiliate de la anumite linkuri."
+footer_rights:
+  other: "Toate drepturile rezervate."
+total_count:
+  other: "Total"
+prev_page:
+  other: "Anterior"
+next_page:
+  other: "Următor"
+no_results:
+  other: "Niciun conținut disponibil încă."
+switch_language:
+  other: "Schimbă limba"

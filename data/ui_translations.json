@@ -19,7 +19,12 @@
     "id": "Indonesia",
     "sv": "Svenska",
     "no": "Norsk",
-    "da": "Dansk"
+    "da": "Dansk",
+    "cs": "Čeština",
+    "el": "Ελληνικά",
+    "fi": "Suomi",
+    "hu": "Magyar",
+    "ro": "Română"
   },
   "site_title": {
     "en": "AI Tools Pricing Comparison",
@@ -41,7 +46,12 @@
     "id": "Perbandingan Harga Alat AI",
     "sv": "AI-verktyg Prisjämförelse",
     "no": "AI-verktøy Prissammenligning",
-    "da": "AI-værktøjer Prissammenligning"
+    "da": "AI-værktøjer Prissammenligning",
+    "cs": "AI Tools Pricing Comparison",
+    "el": "AI Tools Pricing Comparison",
+    "fi": "AI Tools Pricing Comparison",
+    "hu": "AI Tools Pricing Comparison",
+    "ro": "AI Tools Pricing Comparison"
   },
   "tools_title": {
     "en": "AI Tools",
@@ -63,7 +73,12 @@
     "id": "Alat AI",
     "sv": "AI-verktyg",
     "no": "AI-verktøy",
-    "da": "AI-værktøjer"
+    "da": "AI-værktøjer",
+    "cs": "AI Tools",
+    "el": "AI Tools",
+    "fi": "AI Tools",
+    "hu": "AI Tools",
+    "ro": "AI Tools"
   },
   "compare_title": {
     "en": "Compare AI Tools",
@@ -85,7 +100,12 @@
     "id": "Bandingkan Alat AI",
     "sv": "Jämför AI-verktyg",
     "no": "Sammenlign AI-verktøy",
-    "da": "Sammenlign AI-værktøjer"
+    "da": "Sammenlign AI-værktøjer",
+    "cs": "Compare AI Tools",
+    "el": "Compare AI Tools",
+    "fi": "Compare AI Tools",
+    "hu": "Compare AI Tools",
+    "ro": "Compare AI Tools"
   },
   "guides_title": {
     "en": "Money-Saving Guides",
@@ -107,7 +127,12 @@
     "id": "Panduan Hemat",
     "sv": "Sparguider",
     "no": "Sparingsguider",
-    "da": "Spareguider"
+    "da": "Spareguider",
+    "cs": "Money-Saving Guides",
+    "el": "Money-Saving Guides",
+    "fi": "Money-Saving Guides",
+    "hu": "Money-Saving Guides",
+    "ro": "Money-Saving Guides"
   },
   "ranking_title": {
     "en": "Best AI Tools Ranking",
@@ -129,7 +154,12 @@
     "id": "Peringkat Alat AI Terbaik",
     "sv": "Bästa AI-verktyg Ranking",
     "no": "Beste AI-verktøy Rangering",
-    "da": "Bedste AI-værktøjer Rangering"
+    "da": "Bedste AI-værktøjer Rangering",
+    "cs": "Best AI Tools Ranking",
+    "el": "Best AI Tools Ranking",
+    "fi": "Best AI Tools Ranking",
+    "hu": "Best AI Tools Ranking",
+    "ro": "Best AI Tools Ranking"
   },
   "faq_title": {
     "en": "FAQ",
@@ -151,7 +181,12 @@
     "id": "Pertanyaan Umum",
     "sv": "Vanliga Frågor",
     "no": "Vanlige Spørsmål",
-    "da": "Ofte Stillede Spørgsmål"
+    "da": "Ofte Stillede Spørgsmål",
+    "cs": "FAQ",
+    "el": "FAQ",
+    "fi": "FAQ",
+    "hu": "FAQ",
+    "ro": "FAQ"
   },
   "history_title": {
     "en": "Price History",
@@ -173,7 +208,12 @@
     "id": "Riwayat Harga",
     "sv": "Prishistorik",
     "no": "Prishistorikk",
-    "da": "Prishistorik"
+    "da": "Prishistorik",
+    "cs": "Price History",
+    "el": "Price History",
+    "fi": "Price History",
+    "hu": "Price History",
+    "ro": "Price History"
   },
   "alternatives_title": {
     "en": "Alternatives",
@@ -195,7 +235,12 @@
     "id": "Alternatif",
     "sv": "Alternativ",
     "no": "Alternativer",
-    "da": "Alternativer"
+    "da": "Alternativer",
+    "cs": "Alternatives",
+    "el": "Alternatives",
+    "fi": "Alternatives",
+    "hu": "Alternatives",
+    "ro": "Alternatives"
   },
   "search_placeholder": {
     "en": "Search AI tools...",
@@ -217,7 +262,12 @@
     "id": "Cari alat AI...",
     "sv": "Sök AI-verktyg...",
     "no": "Søk AI-verktøy...",
-    "da": "Søg AI-værktøjer..."
+    "da": "Søg AI-værktøjer...",
+    "cs": "Search AI tools...",
+    "el": "Search AI tools...",
+    "fi": "Search AI tools...",
+    "hu": "Search AI tools...",
+    "ro": "Search AI tools..."
   },
   "view_pricing": {
     "en": "View Pricing",
@@ -239,7 +289,12 @@
     "id": "Lihat Harga",
     "sv": "Visa Priser",
     "no": "Se Priser",
-    "da": "Se Priser"
+    "da": "Se Priser",
+    "cs": "View Pricing",
+    "el": "View Pricing",
+    "fi": "View Pricing",
+    "hu": "View Pricing",
+    "ro": "View Pricing"
   },
   "vs_text": {
     "en": "vs",
@@ -261,7 +316,12 @@
     "id": "vs",
     "sv": "mot",
     "no": "mot",
-    "da": "mod"
+    "da": "mod",
+    "cs": "vs",
+    "el": "vs",
+    "fi": "vs",
+    "hu": "vs",
+    "ro": "vs"
   },
   "save_tips": {
     "en": "Save Money Tips",
@@ -283,7 +343,12 @@
     "id": "Tips Hemat",
     "sv": "Spartips",
     "no": "Sparingstips",
-    "da": "Sparetips"
+    "da": "Sparetips",
+    "cs": "Save Money Tips",
+    "el": "Save Money Tips",
+    "fi": "Save Money Tips",
+    "hu": "Save Money Tips",
+    "ro": "Save Money Tips"
   },
   "free_tier": {
     "en": "Free Tier",
@@ -305,7 +370,12 @@
     "id": "Paket Gratis",
     "sv": "Gratisnivå",
     "no": "Gratisnivå",
-    "da": "Gratisniveau"
+    "da": "Gratisniveau",
+    "cs": "Free Tier",
+    "el": "Free Tier",
+    "fi": "Free Tier",
+    "hu": "Free Tier",
+    "ro": "Free Tier"
   },
   "paid_plans": {
     "en": "Paid Plans",
@@ -327,7 +397,12 @@
     "id": "Paket Berbayar",
     "sv": "Betalda Planer",
     "no": "Betalte Planer",
-    "da": "Betalte Planer"
+    "da": "Betalte Planer",
+    "cs": "Paid Plans",
+    "el": "Paid Plans",
+    "fi": "Paid Plans",
+    "hu": "Paid Plans",
+    "ro": "Paid Plans"
   },
   "official_website": {
     "en": "Official Website",
@@ -349,7 +424,12 @@
     "id": "Situs Resmi",
     "sv": "Officiell Webbplats",
     "no": "Offisiell Nettsted",
-    "da": "Officiel Hjemmeside"
+    "da": "Officiel Hjemmeside",
+    "cs": "Official Website",
+    "el": "Official Website",
+    "fi": "Official Website",
+    "hu": "Official Website",
+    "ro": "Official Website"
   },
   "last_updated": {
     "en": "Last Updated",
@@ -371,7 +451,12 @@
     "id": "Terakhir Diperbarui",
     "sv": "Senast Uppdaterad",
     "no": "Sist Oppdatert",
-    "da": "Sidst Opdateret"
+    "da": "Sidst Opdateret",
+    "cs": "Last Updated",
+    "el": "Last Updated",
+    "fi": "Last Updated",
+    "hu": "Last Updated",
+    "ro": "Last Updated"
   },
   "related_tools": {
     "en": "Related Tools",
@@ -393,7 +478,12 @@
     "id": "Alat Terkait",
     "sv": "Relaterade Verktyg",
     "no": "Relaterte Verktøy",
-    "da": "Relaterede Værktøjer"
+    "da": "Relaterede Værktøjer",
+    "cs": "Related Tools",
+    "el": "Related Tools",
+    "fi": "Related Tools",
+    "hu": "Related Tools",
+    "ro": "Related Tools"
   },
   "back_to_list": {
     "en": "Back to List",
@@ -415,7 +505,12 @@
     "id": "Kembali ke Daftar",
     "sv": "Tillbaka till Lista",
     "no": "Tilbake til Liste",
-    "da": "Tilbage til Liste"
+    "da": "Tilbage til Liste",
+    "cs": "Back to List",
+    "el": "Back to List",
+    "fi": "Back to List",
+    "hu": "Back to List",
+    "ro": "Back to List"
   },
   "language_name": {
     "en": "English",
@@ -437,7 +532,12 @@
     "id": "Indonesia",
     "sv": "Svenska",
     "no": "Norsk",
-    "da": "Dansk"
+    "da": "Dansk",
+    "cs": "Čeština",
+    "el": "Ελληνικά",
+    "fi": "Suomi",
+    "hu": "Magyar",
+    "ro": "Română"
   },
   "features": {
     "en": "Features",
@@ -459,7 +559,12 @@
     "id": "Fitur",
     "sv": "Funktioner",
     "no": "Funksjoner",
-    "da": "Funktioner"
+    "da": "Funktioner",
+    "cs": "Features",
+    "el": "Features",
+    "fi": "Features",
+    "hu": "Features",
+    "ro": "Features"
   },
   "pricing": {
     "en": "Pricing",
@@ -481,7 +586,12 @@
     "id": "Harga",
     "sv": "Priser",
     "no": "Priser",
-    "da": "Priser"
+    "da": "Priser",
+    "cs": "Pricing",
+    "el": "Pricing",
+    "fi": "Pricing",
+    "hu": "Pricing",
+    "ro": "Pricing"
   },
   "description": {
     "en": "Description",
@@ -503,7 +613,12 @@
     "id": "Deskripsi",
     "sv": "Beskrivning",
     "no": "Beskrivelse",
-    "da": "Beskrivelse"
+    "da": "Beskrivelse",
+    "cs": "Description",
+    "el": "Description",
+    "fi": "Description",
+    "hu": "Description",
+    "ro": "Description"
   },
   "vendor": {
     "en": "Vendor",
@@ -525,7 +640,12 @@
     "id": "Vendor",
     "sv": "Leverantör",
     "no": "Leverandør",
-    "da": "Leverandør"
+    "da": "Leverandør",
+    "cs": "Vendor",
+    "el": "Vendor",
+    "fi": "Vendor",
+    "hu": "Vendor",
+    "ro": "Vendor"
   },
   "category": {
     "en": "Category",
@@ -547,7 +667,12 @@
     "id": "Kategori",
     "sv": "Kategori",
     "no": "Kategori",
-    "da": "Kategori"
+    "da": "Kategori",
+    "cs": "Category",
+    "el": "Category",
+    "fi": "Category",
+    "hu": "Category",
+    "ro": "Category"
   },
   "founded_year": {
     "en": "Founded",
@@ -569,7 +694,12 @@
     "id": "Didirikan",
     "sv": "Grundat",
     "no": "Grunnlagt",
-    "da": "Grundlagt"
+    "da": "Grundlagt",
+    "cs": "Founded",
+    "el": "Founded",
+    "fi": "Founded",
+    "hu": "Founded",
+    "ro": "Founded"
   },
   "popularity": {
     "en": "Popularity",
@@ -591,7 +721,12 @@
     "id": "Popularitas",
     "sv": "Popularitet",
     "no": "Popularitet",
-    "da": "Popularitet"
+    "da": "Popularitet",
+    "cs": "Popularity",
+    "el": "Popularity",
+    "fi": "Popularity",
+    "hu": "Popularity",
+    "ro": "Popularity"
   },
   "best_for": {
     "en": "Best For",
@@ -613,7 +748,12 @@
     "id": "Paling Cocok Untuk",
     "sv": "Bäst För",
     "no": "Best For",
-    "da": "Bedst Til"
+    "da": "Bedst Til",
+    "cs": "Best For",
+    "el": "Best For",
+    "fi": "Best For",
+    "hu": "Best For",
+    "ro": "Best For"
   },
   "pros": {
     "en": "Pros",
@@ -635,7 +775,12 @@
     "id": "Kelebihan",
     "sv": "Fördelar",
     "no": "Fordeler",
-    "da": "Fordele"
+    "da": "Fordele",
+    "cs": "Pros",
+    "el": "Pros",
+    "fi": "Pros",
+    "hu": "Pros",
+    "ro": "Pros"
   },
   "cons": {
     "en": "Cons",
@@ -657,7 +802,12 @@
     "id": "Kekurangan",
     "sv": "Nackdelar",
     "no": "Ulemper",
-    "da": "Ulemper"
+    "da": "Ulemper",
+    "cs": "Cons",
+    "el": "Cons",
+    "fi": "Cons",
+    "hu": "Cons",
+    "ro": "Cons"
   },
   "read_more": {
     "en": "Read More",
@@ -679,7 +829,12 @@
     "id": "Baca Selengkapnya",
     "sv": "Läs Mer",
     "no": "Les Mer",
-    "da": "Læs Mere"
+    "da": "Læs Mere",
+    "cs": "Read More",
+    "el": "Read More",
+    "fi": "Read More",
+    "hu": "Read More",
+    "ro": "Read More"
   },
   "compare_button": {
     "en": "Compare",
@@ -701,7 +856,12 @@
     "id": "Bandingkan",
     "sv": "Jämför",
     "no": "Sammenlign",
-    "da": "Sammenlign"
+    "da": "Sammenlign",
+    "cs": "Compare",
+    "el": "Compare",
+    "fi": "Compare",
+    "hu": "Compare",
+    "ro": "Compare"
   },
   "view_details": {
     "en": "View Details",
@@ -723,7 +883,12 @@
     "id": "Lihat Detail",
     "sv": "Visa Detaljer",
     "no": "Se Detaljer",
-    "da": "Se Detaljer"
+    "da": "Se Detaljer",
+    "cs": "View Details",
+    "el": "View Details",
+    "fi": "View Details",
+    "hu": "View Details",
+    "ro": "View Details"
   },
   "all_categories": {
     "en": "All Categories",
@@ -745,7 +910,12 @@
     "id": "Semua Kategori",
     "sv": "Alla Kategorier",
     "no": "Alle Kategorier",
-    "da": "Alle Kategorier"
+    "da": "Alle Kategorier",
+    "cs": "All Categories",
+    "el": "All Categories",
+    "fi": "All Categories",
+    "hu": "All Categories",
+    "ro": "All Categories"
   },
   "top_picks": {
     "en": "Top Picks",
@@ -767,7 +937,12 @@
     "id": "Pilihan Teratas",
     "sv": "Toppval",
     "no": "Toppvalg",
-    "da": "Topvalg"
+    "da": "Topvalg",
+    "cs": "Top Picks",
+    "el": "Top Picks",
+    "fi": "Top Picks",
+    "hu": "Top Picks",
+    "ro": "Top Picks"
   },
   "price_trend": {
     "en": "Price Trend",
@@ -789,7 +964,12 @@
     "id": "Tren Harga",
     "sv": "Pristrend",
     "no": "Pristrend",
-    "da": "Pristrend"
+    "da": "Pristrend",
+    "cs": "Price Trend",
+    "el": "Price Trend",
+    "fi": "Price Trend",
+    "hu": "Price Trend",
+    "ro": "Price Trend"
   },
   "save_money": {
     "en": "Save Money",
@@ -811,7 +991,12 @@
     "id": "Hemat",
     "sv": "Spara Pengar",
     "no": "Spar Penger",
-    "da": "Spar Penge"
+    "da": "Spar Penge",
+    "cs": "Save Money",
+    "el": "Save Money",
+    "fi": "Save Money",
+    "hu": "Save Money",
+    "ro": "Save Money"
   },
   "alternatives_for": {
     "en": "Alternatives for",
@@ -833,7 +1018,12 @@
     "id": "Alternatif untuk",
     "sv": "Alternativ för",
     "no": "Alternativer for",
-    "da": "Alternativer for"
+    "da": "Alternativer for",
+    "cs": "Alternatives for",
+    "el": "Alternatives for",
+    "fi": "Alternatives for",
+    "hu": "Alternatives for",
+    "ro": "Alternatives for"
   },
   "faq_intro": {
     "en": "Frequently asked questions about this AI tool, including pricing, features, and usage.",
@@ -855,7 +1045,12 @@
     "id": "Pertanyaan umum tentang alat AI ini, termasuk harga, fitur, dan penggunaan.",
     "sv": "Vanliga frågor om detta AI-verktyg, inklusive priser, funktioner och användning.",
     "no": "Vanlige spørsmål om dette AI-verktøyet, inkludert priser, funksjoner og bruk.",
-    "da": "Ofte stillede spørgsmål om dette AI-værktøj, inklusive priser, funktioner og brug."
+    "da": "Ofte stillede spørgsmål om dette AI-værktøj, inklusive priser, funktioner og brug.",
+    "cs": "Frequently asked questions about this AI tool, including pricing, features, and usage.",
+    "el": "Frequently asked questions about this AI tool, including pricing, features, and usage.",
+    "fi": "Frequently asked questions about this AI tool, including pricing, features, and usage.",
+    "hu": "Frequently asked questions about this AI tool, including pricing, features, and usage.",
+    "ro": "Frequently asked questions about this AI tool, including pricing, features, and usage."
   },
   "save_tips_intro": {
     "en": "Practical tips to save money when using this AI tool, including free tier tricks, annual plans, and alternatives.",
@@ -877,7 +1072,12 @@
     "id": "Tips praktis untuk menghemat uang saat menggunakan alat AI ini, termasuk trik paket gratis, paket tahunan, dan alternatif.",
     "sv": "Praktiska tips för att spara pengar när du använder detta AI-verktyg, inklusive gratisnivå-knep, årsplaner och alternativ.",
     "no": "Praktiske tips for å spare penger når du bruker dette AI-verktøyet, inkludert gratisnivå-triks, årsplaner og alternativer.",
-    "da": "Praktiske tips til at spare penge, når du bruger dette AI-værktøj, herunder gratisniveau-tricks, årsplaner og alternativer."
+    "da": "Praktiske tips til at spare penge, når du bruger dette AI-værktøj, herunder gratisniveau-tricks, årsplaner og alternativer.",
+    "cs": "Practical tips to save money when using this AI tool, including free tier tricks, annual plans, and alternatives.",
+    "el": "Practical tips to save money when using this AI tool, including free tier tricks, annual plans, and alternatives.",
+    "fi": "Practical tips to save money when using this AI tool, including free tier tricks, annual plans, and alternatives.",
+    "hu": "Practical tips to save money when using this AI tool, including free tier tricks, annual plans, and alternatives.",
+    "ro": "Practical tips to save money when using this AI tool, including free tier tricks, annual plans, and alternatives."
   },
   "about": {
     "en": "About",
@@ -899,7 +1099,12 @@
     "id": "Tentang",
     "sv": "Om",
     "no": "Om",
-    "da": "Om"
+    "da": "Om",
+    "cs": "About",
+    "el": "About",
+    "fi": "About",
+    "hu": "About",
+    "ro": "About"
   },
   "privacy": {
     "en": "Privacy Policy",
@@ -921,7 +1126,12 @@
     "id": "Kebijakan Privasi",
     "sv": "Integritetspolicy",
     "no": "Personvernerklæring",
-    "da": "Privatlivspolitik"
+    "da": "Privatlivspolitik",
+    "cs": "Privacy Policy",
+    "el": "Privacy Policy",
+    "fi": "Privacy Policy",
+    "hu": "Privacy Policy",
+    "ro": "Privacy Policy"
   },
   "contact": {
     "en": "Contact",
@@ -943,7 +1153,12 @@
     "id": "Kontak",
     "sv": "Kontakt",
     "no": "Kontakt",
-    "da": "Kontakt"
+    "da": "Kontakt",
+    "cs": "Contact",
+    "el": "Contact",
+    "fi": "Contact",
+    "hu": "Contact",
+    "ro": "Contact"
   },
   "tools_overview": {
     "en": "Overview",
@@ -965,7 +1180,12 @@
     "id": "Ikhtisar",
     "sv": "Översikt",
     "no": "Oversikt",
-    "da": "Oversigt"
+    "da": "Oversigt",
+    "cs": "Overview",
+    "el": "Overview",
+    "fi": "Overview",
+    "hu": "Overview",
+    "ro": "Overview"
   },
   "tools_pricing_table": {
     "en": "Pricing Plans",
@@ -987,7 +1207,12 @@
     "id": "Paket Harga",
     "sv": "Prisplaner",
     "no": "Prisplaner",
-    "da": "Prisplaner"
+    "da": "Prisplaner",
+    "cs": "Pricing Plans",
+    "el": "Pricing Plans",
+    "fi": "Pricing Plans",
+    "hu": "Pricing Plans",
+    "ro": "Pricing Plans"
   },
   "currency": {
     "en": "USD",
@@ -1009,7 +1234,12 @@
     "id": "USD",
     "sv": "USD",
     "no": "USD",
-    "da": "USD"
+    "da": "USD",
+    "cs": "USD",
+    "el": "USD",
+    "fi": "USD",
+    "hu": "USD",
+    "ro": "USD"
   },
   "per_month": {
     "en": "/month",
@@ -1031,7 +1261,12 @@
     "id": "/bulan",
     "sv": "/månad",
     "no": "/måned",
-    "da": "/måned"
+    "da": "/måned",
+    "cs": "/month",
+    "el": "/month",
+    "fi": "/month",
+    "hu": "/month",
+    "ro": "/month"
   },
   "free": {
     "en": "Free",
@@ -1053,7 +1288,12 @@
     "id": "Gratis",
     "sv": "Gratis",
     "no": "Gratis",
-    "da": "Gratis"
+    "da": "Gratis",
+    "cs": "Free",
+    "el": "Free",
+    "fi": "Free",
+    "hu": "Free",
+    "ro": "Free"
   },
   "premium": {
     "en": "Premium",
@@ -1075,7 +1315,12 @@
     "id": "Premium",
     "sv": "Premium",
     "no": "Premium",
-    "da": "Premium"
+    "da": "Premium",
+    "cs": "Premium",
+    "el": "Premium",
+    "fi": "Premium",
+    "hu": "Premium",
+    "ro": "Premium"
   },
   "annual_plan": {
     "en": "Annual Plan (Save 20%)",
@@ -1097,7 +1342,12 @@
     "id": "Paket Tahunan (Hemat 20%)",
     "sv": "Årsplan (Spara 20%)",
     "no": "Årsplan (Spar 20%)",
-    "da": "Årsplan (Spar 20%)"
+    "da": "Årsplan (Spar 20%)",
+    "cs": "Annual Plan (Save 20%)",
+    "el": "Annual Plan (Save 20%)",
+    "fi": "Annual Plan (Save 20%)",
+    "hu": "Annual Plan (Save 20%)",
+    "ro": "Annual Plan (Save 20%)"
   },
   "verdict": {
     "en": "Our Verdict",
@@ -1119,7 +1369,12 @@
     "id": "Putusan Kami",
     "sv": "Vår Bedömning",
     "no": "Vår Vurdering",
-    "da": "Vores Vurdering"
+    "da": "Vores Vurdering",
+    "cs": "Our Verdict",
+    "el": "Our Verdict",
+    "fi": "Our Verdict",
+    "hu": "Our Verdict",
+    "ro": "Our Verdict"
   },
   "ranking_intro": {
     "en": "Top AI tools in this category, ranked by popularity, features, and value for money.",
@@ -1141,7 +1396,12 @@
     "id": "Alat AI teratas dalam kategori ini, diperingkatkan berdasarkan popularitas, fitur, dan nilai untuk uang.",
     "sv": "Top AI-verktyg i denna kategori, rankade efter popularitet, funktioner och värde för pengarna.",
     "no": "Topp AI-verktøy i denne kategorien, rangert etter popularitet, funksjoner og verdi for pengene.",
-    "da": "Top AI-værktøjer i denne kategori, rangeret efter popularitet, funktioner og værdi for pengene."
+    "da": "Top AI-værktøjer i denne kategori, rangeret efter popularitet, funktioner og værdi for pengene.",
+    "cs": "Top AI tools in this category, ranked by popularity, features, and value for money.",
+    "el": "Top AI tools in this category, ranked by popularity, features, and value for money.",
+    "fi": "Top AI tools in this category, ranked by popularity, features, and value for money.",
+    "hu": "Top AI tools in this category, ranked by popularity, features, and value for money.",
+    "ro": "Top AI tools in this category, ranked by popularity, features, and value for money."
   },
   "default_description": {
     "en": "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages.",
@@ -1163,7 +1423,12 @@
     "id": "Bandingkan harga dan fitur alat AI dan temukan penawaran terbaik. Lebih dari 1000 alat AI dalam 20 bahasa.",
     "sv": "Jämför priser och funktioner för AI-verktyg och hitta de bästa erbjudandena. Över 1000 AI-verktyg på 20 språk.",
     "no": "Sammenlign priser og funksjoner for AI-verktøy og finn de beste tilbudene. Over 1000 AI-verktøy på 20 språk.",
-    "da": "Sammenlign priser og funktioner for AI-værktøjer og find de bedste tilbud. Over 1000 AI-værktøjer på 20 sprog."
+    "da": "Sammenlign priser og funktioner for AI-værktøjer og find de bedste tilbud. Over 1000 AI-værktøjer på 20 sprog.",
+    "cs": "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages.",
+    "el": "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages.",
+    "fi": "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages.",
+    "hu": "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages.",
+    "ro": "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages."
   },
   "__categories__": {
     "chatbots": {
@@ -1186,7 +1451,12 @@
       "id": "Chatbot AI",
       "sv": "AI-chattbotar",
       "no": "AI-chatboter",
-      "da": "AI-chatbots"
+      "da": "AI-chatbots",
+      "cs": "AI Chatbots",
+      "el": "AI Chatbots",
+      "fi": "AI Chatbots",
+      "hu": "AI Chatbots",
+      "ro": "AI Chatbots"
     },
     "code": {
       "en": "Code Assistants",
@@ -1208,7 +1478,12 @@
       "id": "Asisten Kode",
       "sv": "Kodassistenter",
       "no": "Kodeassistenter",
-      "da": "Kodeassistenter"
+      "da": "Kodeassistenter",
+      "cs": "Code Assistants",
+      "el": "Code Assistants",
+      "fi": "Code Assistants",
+      "hu": "Code Assistants",
+      "ro": "Code Assistants"
     },
     "image": {
       "en": "Image Generation",
@@ -1230,7 +1505,12 @@
       "id": "Pembuatan Gambar",
       "sv": "Bildgenerering",
       "no": "Bildegenerering",
-      "da": "Billedgenerering"
+      "da": "Billedgenerering",
+      "cs": "Image Generation",
+      "el": "Image Generation",
+      "fi": "Image Generation",
+      "hu": "Image Generation",
+      "ro": "Image Generation"
     },
     "video": {
       "en": "Video Generation",
@@ -1252,7 +1532,12 @@
       "id": "Pembuatan Video",
       "sv": "Videogenerering",
       "no": "Videogenerering",
-      "da": "Videogenerering"
+      "da": "Videogenerering",
+      "cs": "Video Generation",
+      "el": "Video Generation",
+      "fi": "Video Generation",
+      "hu": "Video Generation",
+      "ro": "Video Generation"
     },
     "audio": {
       "en": "Audio Tools",
@@ -1274,7 +1559,12 @@
       "id": "Alat Audio",
       "sv": "Ljudverktyg",
       "no": "Lydverktøy",
-      "da": "Lydværktøjer"
+      "da": "Lydværktøjer",
+      "cs": "Audio Tools",
+      "el": "Audio Tools",
+      "fi": "Audio Tools",
+      "hu": "Audio Tools",
+      "ro": "Audio Tools"
     },
     "writing": {
       "en": "Writing Tools",
@@ -1296,7 +1586,12 @@
       "id": "Alat Menulis",
       "sv": "Skrivverktyg",
       "no": "Skriveverktøy",
-      "da": "Skriveværktøjer"
+      "da": "Skriveværktøjer",
+      "cs": "Writing Tools",
+      "el": "Writing Tools",
+      "fi": "Writing Tools",
+      "hu": "Writing Tools",
+      "ro": "Writing Tools"
     }
   }
 }

@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Přeskočit na obsah"
+nav_home:
+  other: "Domů"
+nav_tools:
+  other: "Nástroje"
+nav_compare:
+  other: "Porovnání"
+nav_guides:
+  other: "Průvodci"
+nav_ranking:
+  other: "Žebříček"
+nav_faq:
+  other: "Časté dotazy"
+search_title:
+  other: "Hledat"
+search_placeholder:
+  other: "Hledat AI nástroje, ceny, průvodce..."
+search_empty:
+  other: "Žádné výsledky"
+search_results:
+  other: "výsledků nalezeno"
+search_clear:
+  other: "Vymazat"
+search_load_more:
+  other: "Načíst další výsledky"
+search_label:
+  other: "Hledání na webu"
+search_submit:
+  other: "Hledat"
+404_message:
+  other: "Jejda! Stránka, kterou hledáte, nebyla nalezena."
+404_hint:
+  other: "Možná byla přesunuta, smazána nebo nikdy neexistovala."
+404_popular:
+  other: "Oblíbené AI nástroje"
+back_to_home:
+  other: "Zpět na domovskou stránku"
+browse_all_tools:
+  other: "Procházet všechny nástroje"
+popular_categories:
+  other: "Oblíbené"
+home_categories_title:
+  other: "Procházet podle kategorie"
+home_recent_changes:
+  other: "Nejnovější změny cen"
+home_popular_comparisons:
+  other: "Oblíbená srovnání"
+home_guides_title:
+  other: "Průvodci úsporami"
+tools:
+  other: "nástrojů"
+view_all_tools:
+  other: "Zobrazit všechny nástroje"
+view_all_comparisons:
+  other: "Zobrazit všechna srovnání"
+view_all_guides:
+  other: "Zobrazit všechny průvodce"
+view_pricing:
+  other: "Zobrazit ceny"
+reading_time:
+  other: "min čtení"
+free_tier:
+  other: "Bezplatná verze"
+free_to_use:
+  other: "Zdarma k použití"
+month:
+  other: "měs"
+visit_official:
+  other: "Navštívit oficiální web"
+tags:
+  other: "Štítky"
+other_languages:
+  other: "Další jazyky"
+previous:
+  other: "Předchozí"
+next:
+  other: "Další"
+footer_explore:
+  other: "Prozkoumat"
+footer_company:
+  other: "Společnost"
+footer_legal:
+  other: "Právní"
+footer_languages:
+  other: "Jazyky"
+footer_about:
+  other: "O nás"
+footer_contact:
+  other: "Kontakt"
+footer_privacy:
+  other: "Zásady ochrany osobních údajů"
+footer_ftc:
+  other: "FTC prohlášení"
+footer_price_disclaimer:
+  other: "Upozornění k cenám"
+footer_terms:
+  other: "Podmínky služby"
+footer_disclaimer_text:
+  other: "Uvedené ceny a plány jsou pouze orientační a mohou se měnit. Před nákupem vždy ověřte na oficiálních webových stránkách poskytovatele. Můžeme získávat affiliate provize z některých odkazů."
+footer_rights:
+  other: "Všechna práva vyhrazena."
+total_count:
+  other: "Celkem"
+prev_page:
+  other: "Předchozí"
+next_page:
+  other: "Další"
+no_results:
+  other: "Zatím žádný obsah."
+switch_language:
+  other: "Změnit jazyk"

@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Μετάβαση στο περιεχόμενο"
+nav_home:
+  other: "Αρχική"
+nav_tools:
+  other: "Εργαλεία"
+nav_compare:
+  other: "Σύγκριση"
+nav_guides:
+  other: "Οδηγοί"
+nav_ranking:
+  other: "Κατάταξη"
+nav_faq:
+  other: "Συχνές ερωτήσεις"
+search_title:
+  other: "Αναζήτηση"
+search_placeholder:
+  other: "Αναζήτηση εργαλείων AI, τιμών, οδηγιών..."
+search_empty:
+  other: "Δεν βρέθηκαν αποτελέσματα"
+search_results:
+  other: "αποτελέσματα"
+search_clear:
+  other: "Καθαρισμός"
+search_load_more:
+  other: "Φόρτωση περισσότερων αποτελεσμάτων"
+search_label:
+  other: "Αναζήτηση ιστοσελίδας"
+search_submit:
+  other: "Αναζήτηση"
+404_message:
+  other: "Ωχ! Η σελίδα που αναζητάτε δεν βρέθηκε."
+404_hint:
+  other: "Μπορεί να έχει μετακινηθεί, διαγραφεί ή να μην υπήρχε ποτέ."
+404_popular:
+  other: "Δημοφιλή εργαλεία AI"
+back_to_home:
+  other: "Επιστροφή στην αρχική"
+browse_all_tools:
+  other: "Περιήγηση σε όλα τα εργαλεία"
+popular_categories:
+  other: "Δημοφιλή"
+home_categories_title:
+  other: "Περιήγηση ανά κατηγορία"
+home_recent_changes:
+  other: "Τελευταίες αλλαγές τιμών"
+home_popular_comparisons:
+  other: "Δημοφιλείς συγκρίσεις"
+home_guides_title:
+  other: "Οδηγοί εξοικονόμησης"
+tools:
+  other: "εργαλεία"
+view_all_tools:
+  other: "Προβολή όλων των εργαλείων"
+view_all_comparisons:
+  other: "Προβολή όλων των συγκρίσεων"
+view_all_guides:
+  other: "Προβολή όλων των οδηγών"
+view_pricing:
+  other: "Προβολή τιμών"
+reading_time:
+  other: "λεπτά ανάγνωσης"
+free_tier:
+  other: "Δωρεάν έκδοση"
+free_to_use:
+  other: "Δωρεάν χρήση"
+month:
+  other: "μῆν"
+visit_official:
+  other: "Επίσκεψη επίσημου ιστότοπου"
+tags:
+  other: "Ετικέτες"
+other_languages:
+  other: "Άλλες γλώσσες"
+previous:
+  other: "Προηγούμενη"
+next:
+  other: "Επόμενη"
+footer_explore:
+  other: "Εξερεύνηση"
+footer_company:
+  other: "Εταιρεία"
+footer_legal:
+  other: "Νομικά"
+footer_languages:
+  other: "Γλώσσες"
+footer_about:
+  other: "Σχετικά"
+footer_contact:
+  other: "Επικοινωνία"
+footer_privacy:
+  other: "Πολιτική απορρήτου"
+footer_ftc:
+  other: "Αποκάλυψη FTC"
+footer_price_disclaimer:
+  other: "Αποποίηση ευθύνης τιμών"
+footer_terms:
+  other: "Όροι χρήσης"
+footer_disclaimer_text:
+  other: "Οι εμφανιζόμενες τιμές και τα πακέτα είναι μόνο για αναφορά και ενδέχεται να αλλάξουν. Επιβεβαιώστε πάντα στην επίσημη ιστοσελίδα του παρόχου πριν την αγορά. Μπορεί να κερδίζουμε προμήθειες affiliate από ορισμένους συνδέσμους."
+footer_rights:
+  other: "Με επιφύλαξη παντός δικαιώματος."
+total_count:
+  other: "Σύνολο"
+prev_page:
+  other: "Προηγούμενη"
+next_page:
+  other: "Επόμενη"
+no_results:
+  other: "Δεν υπάρχει διαθέσιμο περιεχόμενο ακόμη."
+switch_language:
+  other: "Αλλαγή γλώσσας"

@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Siirry sisältöön"
+nav_home:
+  other: "Etusivu"
+nav_tools:
+  other: "Työkalut"
+nav_compare:
+  other: "Vertaa"
+nav_guides:
+  other: "Oppaat"
+nav_ranking:
+  other: "Sijoitus"
+nav_faq:
+  other: "Usein kysytyt kysymykset"
+search_title:
+  other: "Hae"
+search_placeholder:
+  other: "Hae AI-työkaluja, hintoja, oppaita..."
+search_empty:
+  other: "Tuloksia ei löytynyt"
+search_results:
+  other: "tulosta löytyi"
+search_clear:
+  other: "Tyhjennä"
+search_load_more:
+  other: "Lataa lisää tuloksia"
+search_label:
+  other: "Sivustohaku"
+search_submit:
+  other: "Hae"
+404_message:
+  other: "Hups! Etsimääsi sivua ei löytynyt."
+404_hint:
+  other: "Se on saatettu siirtää, poistaa tai sitä ei ole koskaan ollut."
+404_popular:
+  other: "Suositut AI-työkalut"
+back_to_home:
+  other: "Takaisin etusivulle"
+browse_all_tools:
+  other: "Selaa kaikkia työkaluja"
+popular_categories:
+  other: "Suosittu"
+home_categories_title:
+  other: "Selaa luokan mukaan"
+home_recent_changes:
+  other: "Viimeisimmät hinnanmuutokset"
+home_popular_comparisons:
+  other: "Suositut vertailut"
+home_guides_title:
+  other: "Säästöoppaat"
+tools:
+  other: "työkalua"
+view_all_tools:
+  other: "Näytä kaikki työkalut"
+view_all_comparisons:
+  other: "Näytä kaikki vertailut"
+view_all_guides:
+  other: "Näytä kaikki oppaat"
+view_pricing:
+  other: "Näytä hinnat"
+reading_time:
+  other: "min lukuaika"
+free_tier:
+  other: "Ilmainen versio"
+free_to_use:
+  other: "Ilmainen käyttö"
+month:
+  other: "kk"
+visit_official:
+  other: "Vieraile virallisella sivustolla"
+tags:
+  other: "Tunnisteet"
+other_languages:
+  other: "Muut kielet"
+previous:
+  other: "Edellinen"
+next:
+  other: "Seuraava"
+footer_explore:
+  other: "Tutki"
+footer_company:
+  other: "Yritys"
+footer_legal:
+  other: "Lainopillinen"
+footer_languages:
+  other: "Kielet"
+footer_about:
+  other: "Tietoja meistä"
+footer_contact:
+  other: "Yhteystiedot"
+footer_privacy:
+  other: "Tietosuojakäytäntö"
+footer_ftc:
+  other: "FTC-ilmoitus"
+footer_price_disclaimer:
+  other: "Hintavastuuvapauslauseke"
+footer_terms:
+  other: "Käyttöehdot"
+footer_disclaimer_text:
+  other: "Esitetyt hinnat ja paketit ovat vain viitteellisiä ja voivat muuttua. Vahvista aina virallisen tarjoajan verkkosivustolta ennen ostoa. Voimme saada affiliate-provisioita joistakin linkeistä."
+footer_rights:
+  other: "Kaikki oikeudet pidätetään."
+total_count:
+  other: "Yhteensä"
+prev_page:
+  other: "Edellinen"
+next_page:
+  other: "Seuraava"
+no_results:
+  other: "Sisältöä ei ole vielä saatavilla."
+switch_language:
+  other: "Vaihda kieltä"
