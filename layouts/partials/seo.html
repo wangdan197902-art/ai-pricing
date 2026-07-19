@@ -99,3 +99,20 @@
   gtag('config', '{{ . }}');
 </script>
 {{ end }}
+
+{{/* ===== 以下标签由 github-pages-部署器/scripts/添加验证标签.py 追加 ===== */}}
+
+{{/* Ahrefs 站点验证 */}}
+{{ with .Site.Params.ahrefs_site_verification }}
+<meta name="ahrefs-site-verification" content="{{ . }}">
+{{ end }}
+
+{{/* Google AdSense 自动广告 */}}
+{{ with .Site.Params.adsense_client }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+{{ end }}
+
+{{/* IndexNow API Key 声明 */}}
+{{ with .Site.Params.indexnow_api_key }}
+<link rel="stylesheet" href="/{{ . }}.txt">
+{{ end }}
