@@ -17,6 +17,9 @@ logLevel = "error"
   author = "AI Pricing Hub"
   site_url = "https://pricing.ai-term-hub.com"
   default_og_image = "/images/og-default.svg"
+  # Google Search Console 验证（主入口 pricing.ai-term-hub.com）
+  # 参数名与 hugo-{lang}.toml 中的 [params] 段落保持一致（snake_case）
+  google_site_verification = "Po21SS8ccODMgK6x0_LBsBX0t5qz7bdqRzASwE-ngyo"
 
 [outputs]
   home = ["HTML"]
