@@ -1,0 +1,86 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AGNES_LLM_MODEL: ${{ secrets.AGNES_LLM_MODEL }}
+      AGNES_LLM_BASE_URL: ${{ secrets.AGNES_LLM_BASE_URL }}
+      AGNES_LLM_API_KEY: ${{ secrets.AGNES_LLM_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Python dependencies
+        run: pip install openai requests
+        continue-on-error: true
+      - name: Install Pagefind
+        run: npm install -g pagefind
+        continue-on-error: true
+      - name: Generate tools data
+        run: python3 scripts/lib/tools_data.py
+        continue-on-error: true
+      - name: Generate UI translations
+        run: python3 scripts/lib/i18n.py
+        continue-on-error: true
+      - name: Generate pages (Markdown)
+        run: python3 scripts/generate_pages.py --all
+        continue-on-error: true
+      - name: Generate static HTML
+        run: python3 scripts/generate_static_html.py
+        continue-on-error: true
+      - name: Generate llms.txt
+        run: python3 scripts/generate_llms_txt.py || true
+        continue-on-error: true
+      - name: Generate Pagefind search index
+        run: pagefind --site public/
+        continue-on-error: true
+      - name: Add .nojekyll
+        run: touch public/.nojekyll
+      - name: Ensure index.html
+        run: |
+          if [ ! -f public/index.html ]; then
+            mkdir -p public
+            cat > public/index.html << 'HTMLEOF'
+          <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>AI Pricing</title></head><body><h1>AI Pricing</h1><p>Site is being deployed. Please wait a moment...</p></body></html>
+          HTMLEOF
+          fi
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
