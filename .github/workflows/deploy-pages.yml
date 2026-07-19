@@ -62,11 +62,18 @@ jobs:
         run: touch public/.nojekyll
       - name: Ensure index.html
         run: |
+          # 根目录 index.html 优先使用英文版首页（generate_static_html.py 只生成 {lang}/index.html）
           if [ ! -f public/index.html ]; then
-            mkdir -p public
-            cat > public/index.html << 'HTMLEOF'
+            if [ -f public/en/index.html ]; then
+              cp public/en/index.html public/index.html
+              echo "已复制 public/en/index.html → public/index.html"
+            else
+              mkdir -p public
+              cat > public/index.html << 'HTMLEOF'
           <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>AI Pricing</title></head><body><h1>AI Pricing</h1><p>Site is being deployed. Please wait a moment...</p></body></html>
           HTMLEOF
+              echo "警告：en/index.html 不存在，使用占位 HTML"
+            fi
           fi
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
