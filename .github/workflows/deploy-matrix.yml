@@ -115,6 +115,52 @@ jobs:
           # IndexNow API Key 文件（用于 Bing/Yandex 即时索引推送）
           echo "a0f6b5032dd63cf84271ae3ab4fcaf86" > publish-${{ matrix.lang }}/a0f6b5032dd63cf84271ae3ab4fcaf86.txt
 
+      - name: Fix root redirect pages (Hugo 0.140.0 multi-lang bug)
+        run: |
+          # Hugo 0.140.0 在多语种构建时，根目录 /index.html 和 /page/1/index.html 
+          # 会生成"重定向到默认语种子目录"的页面（< 1KB）
+          # 但因为 baseURL 已是单语种域名，重定向到自身导致无限循环
+          # 修复：用 /page/2/index.html（真正首页第一页内容）覆盖
+          cd publish-${{ matrix.lang }}
+          
+          # 找到真正首页内容（/page/2/index.html 通常是2.6M真正内容）
+          REAL_HOME=""
+          for p in page/2 page/3 page/4 page/5 page/6; do
+            if [ -f "$p/index.html" ] && [ $(wc -c < "$p/index.html") -gt 10000 ]; then
+              REAL_HOME="$p/index.html"
+              break
+            fi
+          done
+          
+          if [ -z "$REAL_HOME" ]; then
+            echo "⚠️ 未找到真正首页内容，跳过修复"
+          else
+            echo "✅ 找到真正首页内容: $REAL_HOME ($(wc -c < $REAL_HOME) 字节)"
+            
+            # 修复根目录 index.html（如果是重定向页 < 1KB）
+            if [ -f index.html ] && [ $(wc -c < index.html) -lt 1000 ]; then
+              echo "⚠️ 根目录 index.html 是重定向页 ($(wc -c < index.html) 字节)，用 $REAL_HOME 覆盖"
+              cp "$REAL_HOME" index.html
+            fi
+            
+            # 修复 /page/1/index.html（如果是重定向页 < 1KB）
+            if [ -f page/1/index.html ] && [ $(wc -c < page/1/index.html) -lt 1000 ]; then
+              echo "⚠️ /page/1/index.html 是重定向页 ($(wc -c < page/1/index.html) 字节)，用 $REAL_HOME 覆盖"
+              cp "$REAL_HOME" page/1/index.html
+            fi
+          fi
+          
+          # 修复 sitemap.xml：去掉 /{lang}/ 前缀（Hugo 错误地添加了）
+          if [ -f sitemap.xml ]; then
+            SITEMAP_SIZE_BEFORE=$(wc -c < sitemap.xml)
+            sed -i "s|<loc>https://${{ matrix.lang }}\.${{ env.SITE_TYPE }}\.${{ env.DOMAIN }}/${{ matrix.lang }}/|<loc>https://${{ matrix.lang }}.${{ env.SITE_TYPE }}.${{ env.DOMAIN }}/|g" sitemap.xml
+            SITEMAP_SIZE_AFTER=$(wc -c < sitemap.xml)
+            REMOVED=$(awk "BEGIN{print $SITEMAP_SIZE_BEFORE - $SITEMAP_SIZE_AFTER}")
+            echo "✅ 修复 sitemap.xml：去除了 ${{ matrix.lang }}/ 前缀（减少 $REMOVED 字节）"
+          fi
+          
+          echo "=== 修复后根目录 index.html 大小: $(wc -c < index.html) 字节 ==="
+
       - name: Deploy to ${{ matrix.lang }}.github.io
         uses: peaceiris/actions-gh-pages@v4
         with:
