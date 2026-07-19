@@ -1,0 +1,91 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # 每日北京时间 8:00 = UTC 0:00
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: '3.11'
+  NODE_VERSION: '20'
+  AGNES_LLM_MODEL: ${{ secrets.AGNES_LLM_MODEL }}
+  AGNES_LLM_BASE_URL: ${{ secrets.AGNES_LLM_BASE_URL }}
+  AGNES_LLM_API_KEY: ${{ secrets.AGNES_LLM_API_KEY }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Python dependencies
+        run: pip install openai requests
+
+      - name: Install Pagefind
+        run: npm install -g pagefind
+
+      - name: Generate tools data
+        run: python3 scripts/lib/tools_data.py
+
+      - name: Generate UI translations
+        run: python3 scripts/lib/i18n.py
+
+      - name: Generate pages (Markdown)
+        run: python3 scripts/generate_pages.py --all
+
+      - name: Generate static HTML (bypass Hugo for performance)
+        run: python3 scripts/generate_static_html.py
+
+      - name: Generate llms.txt
+        run: python3 scripts/generate_llms_txt.py || true
+
+      - name: Generate Pagefind search index
+        continue-on-error: true
+        run: pagefind --site public/
+
+      - name: Verify build output
+        run: |
+          echo "HTML 文件数: $(find public -name '*.html' | wc -l)"
+          echo "总文件数: $(find public -type f | wc -l)"
+          echo "public 目录大小: $(du -sh public/ | cut -f1)"
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: './public'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions (${{ github.sha }})"
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

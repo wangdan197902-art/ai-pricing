@@ -1,0 +1,113 @@
+{{ define "main" }}
+{{/* 单页模板：工具详情页 / 攻略详情页 / FAQ 等 */}}
+<article class="single-detail" data-pagefind-body>
+    {{/* 面包屑导航 */}}
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="{{ "/" | relLangURL }}">{{ T "nav_home" | default "Home" }}</a></li>
+            {{ with .Section }}
+            <li><a href="{{ printf "/%s/" . | relLangURL }}">{{ . | humanize | title }}</a></li>
+            {{ end }}
+            <li aria-current="page">{{ .Title }}</li>
+        </ol>
+    </nav>
+
+    {{/* 文章标题与元信息 */}}
+    <header class="single-header">
+        <h1>{{ .Title }}</h1>
+
+        <div class="single-meta">
+            {{/* 发布日期 */}}
+            {{ if not .PublishDate.IsZero }}
+            <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" class="meta-date">
+                {{ .PublishDate.Format "2006-01-02" }}
+            </time>
+            {{ end }}
+
+            {{/* 分类 */}}
+            {{ with .Params.category }}
+            <span class="meta-separator" aria-hidden="true">·</span>
+            <span class="meta-category">
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+            </span>
+            {{ end }}
+
+            {{/* 阅读时长（仅攻略类） */}}
+            {{ if eq .Type "guides" }}
+            <span class="meta-separator" aria-hidden="true">·</span>
+            <span class="meta-reading-time">{{ T "reading_time" | default "min read" }}: {{ .ReadingTime }}</span>
+            {{ end }}
+
+            {{/* 价格区间（工具详情页） */}}
+            {{ if eq .Type "tools" }}
+            <span class="meta-separator" aria-hidden="true">·</span>
+            <span class="meta-price">
+                {{ if .Params.free_tier }}
+                <span class="free-tag">{{ T "free_tier" | default "Free tier" }}</span>
+                {{ end }}
+                {{ with .Params.price_min }}
+                <span class="price-range">
+                    {{ $.Params.currency | default "$" }}{{ . }}{{ with $.Params.price_max }} - {{ $.Params.currency | default "$" }}{{ . }}{{ end }}/{{ T "month" | default "mo" }}
+                </span>
+                {{ end }}
+            </span>
+            {{ end }}
+        </div>
+
+        {{/* 工具详情页：官方链接按钮 */}}
+        {{ if eq .Type "tools" }}
+        {{ with .Params.official_url }}
+        <div class="single-cta">
+            <a href="{{ . }}" class="btn btn-primary" target="_blank" rel="noopener nofollow sponsored" aria-label="{{ $.Title }} official website">
+                {{ T "visit_official" | default "Visit Official Site" }} ↗
+            </a>
+        </div>
+        {{ end }}
+        {{ end }}
+    </header>
+
+    {{/* 文章正文 */}}
+    <div class="single-content">
+        {{ .Content }}
+    </div>
+
+    {{/* 标签 */}}
+    {{ with .Params.tags }}
+    <footer class="single-tags">
+        <h2 class="tags-title">{{ T "tags" | default "Tags" }}</h2>
+        <ul class="tags-inline">
+            {{ range . }}
+            <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="tag-pill">{{ . }}</a></li>
+            {{ end }}
+        </ul>
+    </footer>
+    {{ end }}
+
+    {{/* 语言切换器：让用户快速切换到其他语种版本 */}}
+    <section class="single-languages" data-pagefind-ignore>
+        <h2>{{ T "other_languages" | default "Other languages" }}</h2>
+        {{ partial "language-switcher.html" . }}
+    </section>
+
+    {{/* 上一篇 / 下一篇导航 */}}
+    <nav class="post-nav" aria-label="Post navigation" data-pagefind-ignore>
+        {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" class="post-nav-prev" rel="prev">
+            <span class="post-nav-label">← {{ T "previous" | default "Previous" }}</span>
+            <span class="post-nav-title">{{ .Title }}</span>
+        </a>
+        {{ else }}
+        <span class="post-nav-prev post-nav-empty"></span>
+        {{ end }}
+
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="post-nav-next" rel="next">
+            <span class="post-nav-label">{{ T "next" | default "Next" }} →</span>
+            <span class="post-nav-title">{{ .Title }}</span>
+        </a>
+        {{ else }}
+        <span class="post-nav-next post-nav-empty"></span>
+        {{ end }}
+    </nav>
+</article>
+{{ end }}

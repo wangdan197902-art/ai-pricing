@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "İçeriğe geç"
+nav_home:
+  other: "Ana Sayfa"
+nav_tools:
+  other: "Araçlar"
+nav_compare:
+  other: "Karşılaştır"
+nav_guides:
+  other: "Rehberler"
+nav_ranking:
+  other: "Sıralama"
+nav_faq:
+  other: "Sıkça Sorulan Sorular"
+search_title:
+  other: "Ara"
+search_placeholder:
+  other: "AI araçları, fiyatlar, rehberler ara..."
+search_empty:
+  other: "Sonuç bulunamadı"
+search_results:
+  other: "sonuç bulundu"
+search_clear:
+  other: "Temizle"
+search_load_more:
+  other: "Daha fazla sonuç yükle"
+search_label:
+  other: "Site içinde ara"
+search_submit:
+  other: "Ara"
+404_message:
+  other: "Oops! Aradığınız sayfa bulunamadı."
+404_hint:
+  other: "Taşınmış, silinmiş veya hiç var olmamış olabilir."
+404_popular:
+  other: "Popüler AI Araçları"
+back_to_home:
+  other: "Ana sayfaya dön"
+browse_all_tools:
+  other: "Tüm araçlara göz at"
+popular_categories:
+  other: "Popüler"
+home_categories_title:
+  other: "Kategoriye göre göz at"
+home_recent_changes:
+  other: "En son fiyat değişiklikleri"
+home_popular_comparisons:
+  other: "Popüler karşılaştırmalar"
+home_guides_title:
+  other: "Tasarruf Rehberleri"
+tools:
+  other: "araç"
+view_all_tools:
+  other: "Tüm araçları gör"
+view_all_comparisons:
+  other: "Tüm karşılaştırmaları gör"
+view_all_guides:
+  other: "Tüm rehberleri gör"
+view_pricing:
+  other: "Fiyatları gör"
+reading_time:
+  other: "dk okuma"
+free_tier:
+  other: "Ücretsiz plan"
+free_to_use:
+  other: "Ücretsiz kullanım"
+month:
+  other: "ay"
+visit_official:
+  other: "Resmi siteyi ziyaret et"
+tags:
+  other: "Etiketler"
+other_languages:
+  other: "Diğer diller"
+previous:
+  other: "Önceki"
+next:
+  other: "Sonraki"
+footer_explore:
+  other: "Keşfet"
+footer_company:
+  other: "Şirket"
+footer_legal:
+  other: "Yasal"
+footer_languages:
+  other: "Diller"
+footer_about:
+  other: "Hakkımızda"
+footer_contact:
+  other: "İletişim"
+footer_privacy:
+  other: "Gizlilik Politikası"
+footer_ftc:
+  other: "FTC Açıklaması"
+footer_price_disclaimer:
+  other: "Fiyat Feragatı"
+footer_terms:
+  other: "Hizmet Şartları"
+footer_disclaimer_text:
+  other: "Gösterilen fiyat ve planlar yalnızca referans amaçlıdır ve değişebilir. Satın almadan önce resmi sağlayıcı web sitesinde her zaman doğrulayın. Bazı bağlantılardan affiliate komisyonları kazanabiliriz."
+footer_rights:
+  other: "Tüm hakları saklıdır."
+total_count:
+  other: "Toplam"
+prev_page:
+  other: "Önceki"
+next_page:
+  other: "Sonraki"
+no_results:
+  other: "Henüz içerik bulunmuyor."
+switch_language:
+  other: "Dili değiştir"

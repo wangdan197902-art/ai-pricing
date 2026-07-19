@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Zum Inhalt springen"
+nav_home:
+  other: "Startseite"
+nav_tools:
+  other: "Tools"
+nav_compare:
+  other: "Vergleichen"
+nav_guides:
+  other: "Leitfäden"
+nav_ranking:
+  other: "Ranking"
+nav_faq:
+  other: "FAQ"
+search_title:
+  other: "Suchen"
+search_placeholder:
+  other: "KI-Tools, Preise, Leitfäden suchen..."
+search_empty:
+  other: "Keine Ergebnisse gefunden"
+search_results:
+  other: "Ergebnisse gefunden"
+search_clear:
+  other: "Löschen"
+search_load_more:
+  other: "Mehr Ergebnisse laden"
+search_label:
+  other: "Website durchsuchen"
+search_submit:
+  other: "Suchen"
+404_message:
+  other: "Hoppla! Die gesuchte Seite wurde nicht gefunden."
+404_hint:
+  other: "Sie wurde möglicherweise verschoben, gelöscht oder hat nie existiert."
+404_popular:
+  other: "Beliebte KI-Tools"
+back_to_home:
+  other: "Zurück zur Startseite"
+browse_all_tools:
+  other: "Alle Tools durchsuchen"
+popular_categories:
+  other: "Beliebt"
+home_categories_title:
+  other: "Nach Kategorie durchsuchen"
+home_recent_changes:
+  other: "Neueste Preisänderungen"
+home_popular_comparisons:
+  other: "Beliebte Vergleiche"
+home_guides_title:
+  other: "Spar-Leitfäden"
+tools:
+  other: "Tools"
+view_all_tools:
+  other: "Alle Tools ansehen"
+view_all_comparisons:
+  other: "Alle Vergleiche ansehen"
+view_all_guides:
+  other: "Alle Leitfäden ansehen"
+view_pricing:
+  other: "Preise ansehen"
+reading_time:
+  other: "Min. Lesezeit"
+free_tier:
+  other: "Kostenlose Version"
+free_to_use:
+  other: "Kostenlos nutzbar"
+month:
+  other: "Monat"
+visit_official:
+  other: "Offizielle Website besuchen"
+tags:
+  other: "Tags"
+other_languages:
+  other: "Andere Sprachen"
+previous:
+  other: "Zurück"
+next:
+  other: "Weiter"
+footer_explore:
+  other: "Entdecken"
+footer_company:
+  other: "Unternehmen"
+footer_legal:
+  other: "Rechtliches"
+footer_languages:
+  other: "Sprachen"
+footer_about:
+  other: "Über uns"
+footer_contact:
+  other: "Kontakt"
+footer_privacy:
+  other: "Datenschutzerklärung"
+footer_ftc:
+  other: "FTC Offenlegung"
+footer_price_disclaimer:
+  other: "Preis-Hinweis"
+footer_terms:
+  other: "Nutzungsbedingungen"
+footer_disclaimer_text:
+  other: "Die angezeigten Preise und Pläne dienen nur als Referenz und können sich ändern. Bitte überprüfen Sie diese vor dem Kauf immer auf der offiziellen Website des Anbieters. Wir können Affiliate-Provisionen aus einigen Links erhalten."
+footer_rights:
+  other: "Alle Rechte vorbehalten."
+total_count:
+  other: "Gesamt"
+prev_page:
+  other: "Zurück"
+next_page:
+  other: "Weiter"
+no_results:
+  other: "Noch keine Inhalte verfügbar."
+switch_language:
+  other: "Sprache wechseln"

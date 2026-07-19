@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Lewati ke konten"
+nav_home:
+  other: "Beranda"
+nav_tools:
+  other: "Alat"
+nav_compare:
+  other: "Bandingkan"
+nav_guides:
+  other: "Panduan"
+nav_ranking:
+  other: "Peringkat"
+nav_faq:
+  other: "Pertanyaan umum"
+search_title:
+  other: "Cari"
+search_placeholder:
+  other: "Cari alat AI, harga, panduan..."
+search_empty:
+  other: "Tidak ada hasil ditemukan"
+search_results:
+  other: "hasil ditemukan"
+search_clear:
+  other: "Hapus"
+search_load_more:
+  other: "Muat hasil lainnya"
+search_label:
+  other: "Cari di situs"
+search_submit:
+  other: "Cari"
+404_message:
+  other: "Ups! Halaman yang Anda cari tidak ditemukan."
+404_hint:
+  other: "Halaman mungkin telah dipindahkan, dihapus, atau tidak pernah ada."
+404_popular:
+  other: "Alat AI populer"
+back_to_home:
+  other: "Kembali ke beranda"
+browse_all_tools:
+  other: "Jelajahi semua alat"
+popular_categories:
+  other: "Populer"
+home_categories_title:
+  other: "Jelajahi berdasarkan kategori"
+home_recent_changes:
+  other: "Perubahan harga terbaru"
+home_popular_comparisons:
+  other: "Perbandingan populer"
+home_guides_title:
+  other: "Panduan hemat"
+tools:
+  other: "alat"
+view_all_tools:
+  other: "Lihat semua alat"
+view_all_comparisons:
+  other: "Lihat semua perbandingan"
+view_all_guides:
+  other: "Lihat semua panduan"
+view_pricing:
+  other: "Lihat harga"
+reading_time:
+  other: "menit baca"
+free_tier:
+  other: "Paket gratis"
+free_to_use:
+  other: "Gratis digunakan"
+month:
+  other: "bln"
+visit_official:
+  other: "Kunjungi situs resmi"
+tags:
+  other: "Tag"
+other_languages:
+  other: "Bahasa lain"
+previous:
+  other: "Sebelumnya"
+next:
+  other: "Berikutnya"
+footer_explore:
+  other: "Jelajahi"
+footer_company:
+  other: "Perusahaan"
+footer_legal:
+  other: "Hukum"
+footer_languages:
+  other: "Bahasa"
+footer_about:
+  other: "Tentang"
+footer_contact:
+  other: "Kontak"
+footer_privacy:
+  other: "Kebijakan privasi"
+footer_ftc:
+  other: "Pengungkapan FTC"
+footer_price_disclaimer:
+  other: "Sangkalan harga"
+footer_terms:
+  other: "Ketentuan layanan"
+footer_disclaimer_text:
+  other: "Harga dan paket yang ditampilkan hanya untuk referensi dan dapat berubah. Selalu verifikasi di situs web resmi penyedia sebelum membeli. Kami dapat memperoleh komisi afiliasi dari beberapa tautan."
+footer_rights:
+  other: "Hak cipta dilindungi."
+total_count:
+  other: "Total"
+prev_page:
+  other: "Sebelumnya"
+next_page:
+  other: "Berikutnya"
+no_results:
+  other: "Belum ada konten tersedia."
+switch_language:
+  other: "Ganti bahasa"

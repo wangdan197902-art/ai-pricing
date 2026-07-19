@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{/* 404 页面：友好提示 + 搜索框 + 热门工具推荐 + 返回首页按钮 */}}
+<section class="error-page" data-pagefind-ignore>
+    <div class="error-content">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">{{ T "404_message" | default "Oops! The page you are looking for was not found." }}</p>
+        <p class="error-hint">{{ T "404_hint" | default "It may have been moved, deleted, or never existed." }}</p>
+
+        {{/* 搜索框：让用户重新搜索 */}}
+        <div class="error-search">
+            {{ partial "search-box.html" . }}
+        </div>
+
+        {{/* 推荐热门工具链接 */}}
+        <div class="error-popular">
+            <h2>{{ T "404_popular" | default "Popular AI Tools" }}</h2>
+            <ul class="error-popular-list">
+                <li><a href="{{ "/tools/chatgpt/" | relLangURL }}">ChatGPT</a></li>
+                <li><a href="{{ "/tools/claude/" | relLangURL }}">Claude</a></li>
+                <li><a href="{{ "/tools/gemini/" | relLangURL }}">Gemini</a></li>
+                <li><a href="{{ "/tools/midjourney/" | relLangURL }}">Midjourney</a></li>
+                <li><a href="{{ "/tools/copilot/" | relLangURL }}">Copilot</a></li>
+                <li><a href="{{ "/tools/perplexity/" | relLangURL }}">Perplexity</a></li>
+            </ul>
+        </div>
+
+        {{/* 返回首页按钮 */}}
+        <div class="error-actions">
+            <a href="{{ "/" | relLangURL }}" class="btn btn-primary">
+                ← {{ T "back_to_home" | default "Back to Home" }}
+            </a>
+            <a href="{{ "/tools/" | relLangURL }}" class="btn btn-secondary">
+                {{ T "browse_all_tools" | default "Browse all tools" }}
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }}

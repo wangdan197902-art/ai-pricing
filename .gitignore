@@ -1,0 +1,68 @@
+# Hugo 构建产物
+public/
+resources/
+.hugo_build.lock
+.hugo_batch_tmp/
+
+# 生成的 Markdown 内容（由 generate_pages.py 在 CI 中生成）
+content/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# 虚拟环境
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+logs/
+
+# 临时文件
+*.tmp
+*.bak
+*.cache
+
+# 敏感配置（包含密钥的文件）
+.accounts_master.md
+.adsense_credentials.md
+.cloudflare_credentials.md
+.netlify_credentials.md
+.sites_deployment_info.md
+.spaceship_credentials.md
+.agnes_api_config.md
+.github_token
+
+# Netlify
+.netlify/state.json
+
+# 数据库文件
+*.db
+*.sqlite
+*.jsonl
+
+# 大文件（不提交到 git）
+data/price_history.json
+data/price_change_report.md
+
+# 备份
+*.backup
+*.old

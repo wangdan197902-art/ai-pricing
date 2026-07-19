@@ -1,0 +1,127 @@
+{{ define "main" }}
+{{/* 首页：Hero + 热门分类 + 最新价格变动 + 热门对比 + 多语言切换 */}}
+<div class="home-page" data-pagefind-body>
+
+    {{/* ===== Hero 区域 ===== */}}
+    <section class="hero">
+        <div class="hero-inner">
+            <h1 class="hero-title">{{ .Title | default .Site.Title }}</h1>
+            <p class="hero-subtitle">{{ .Site.Params.description }}</p>
+
+            {{/* 大型搜索框：调用 partials/search-box.html */}}
+            <div class="hero-search">
+                {{ partial "search-box.html" . }}
+            </div>
+
+            {{/* 快捷分类链接 */}}
+            <div class="hero-quick-links" data-pagefind-ignore>
+                <span class="quick-links-label">{{ T "popular_categories" | default "Popular" }}:</span>
+                <a href="{{ "/tools/chatgpt/" | relLangURL }}">ChatGPT</a>
+                <a href="{{ "/tools/claude/" | relLangURL }}">Claude</a>
+                <a href="{{ "/tools/gemini/" | relLangURL }}">Gemini</a>
+                <a href="{{ "/tools/midjourney/" | relLangURL }}">Midjourney</a>
+                <a href="{{ "/tools/copilot/" | relLangURL }}">Copilot</a>
+            </div>
+
+            {{/* 多语言切换 */}}
+            <div class="hero-langs" data-pagefind-ignore>
+                {{ partial "language-switcher.html" . }}
+            </div>
+        </div>
+    </section>
+
+    {{/* ===== 热门工具分类 ===== */}}
+    <section class="home-section home-categories">
+        <h2 class="section-title">{{ T "home_categories_title" | default "Browse by Category" }}</h2>
+        <div class="category-grid">
+            {{ range $name, $term := .Site.Taxonomies.categories }}
+            <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/" class="category-card">
+                <span class="category-icon" aria-hidden="true">▶</span>
+                <span class="category-name">{{ $name | humanize | title }}</span>
+                <span class="category-count">{{ $term.Count }} {{ T "tools" | default "tools" }}</span>
+            </a>
+            {{ end }}
+        </div>
+    </section>
+
+    {{/* ===== 最新价格变动 ===== */}}
+    {{ with where .Site.RegularPages "Section" "tools" }}
+    {{ $recent := first 6 (sort . "Lastmod" "desc") }}
+    {{ if $recent }}
+    <section class="home-section home-recent">
+        <h2 class="section-title">{{ T "home_recent_changes" | default "Latest Price Changes" }}</h2>
+        <div class="tool-grid">
+            {{ range $recent }}
+                {{ partial "tool-card.html" . }}
+            {{ end }}
+        </div>
+        <div class="home-section-footer">
+            <a href="{{ "/tools/" | relLangURL }}" class="btn btn-secondary">
+                {{ T "view_all_tools" | default "View all tools" }} →
+            </a>
+        </div>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    {{/* ===== 热门对比 ===== */}}
+    {{ with where .Site.RegularPages "Section" "compare" }}
+    {{ $popular := first 4 . }}
+    {{ if $popular }}
+    <section class="home-section home-compare">
+        <h2 class="section-title">{{ T "home_popular_comparisons" | default "Popular Comparisons" }}</h2>
+        <div class="compare-grid">
+            {{ range $popular }}
+            <article class="compare-card" data-pagefind-body>
+                <a href="{{ .RelPermalink }}" class="compare-link">
+                    <h3 class="compare-title">{{ .Title }}</h3>
+                    <p class="compare-desc">{{ .Description | default (plainify .Summary | truncate 100) }}</p>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+        <div class="home-section-footer">
+            <a href="{{ "/compare/" | relLangURL }}" class="btn btn-secondary">
+                {{ T "view_all_comparisons" | default "View all comparisons" }} →
+            </a>
+        </div>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    {{/* ===== 热门攻略 ===== */}}
+    {{ with where .Site.RegularPages "Section" "guides" }}
+    {{ $guides := first 3 . }}
+    {{ if $guides }}
+    <section class="home-section home-guides">
+        <h2 class="section-title">{{ T "home_guides_title" | default "Saving Guides" }}</h2>
+        <div class="guide-grid">
+            {{ range $guides }}
+            <article class="guide-card" data-pagefind-body>
+                <a href="{{ .RelPermalink }}" class="guide-link">
+                    <h3 class="guide-title">{{ .Title }}</h3>
+                    <p class="guide-desc">{{ .Description | default (plainify .Summary | truncate 120) }}</p>
+                    <time class="guide-date" datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .PublishDate.Format "2006-01-02" }}
+                    </time>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+        <div class="home-section-footer">
+            <a href="{{ "/guides/" | relLangURL }}" class="btn btn-secondary">
+                {{ T "view_all_guides" | default "View all guides" }} →
+            </a>
+        </div>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    {{/* ===== 首页正文内容（如有 _index.md） ===== */}}
+    {{ with .Content }}
+    <section class="home-content">
+        {{ . }}
+    </section>
+    {{ end }}
+</div>
+{{ end }}

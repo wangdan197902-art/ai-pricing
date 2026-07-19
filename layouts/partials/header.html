@@ -1,0 +1,30 @@
+{{/* 站点头部：Logo / 主导航 / 搜索框 / 语言切换 / 移动端汉堡菜单 */}}
+<header class="site-header" role="banner">
+    <div class="container header-inner">
+        <a href="{{ "/" | relLangURL }}" class="logo" aria-label="{{ .Site.Title }} home">
+            <img src="{{ "logo.svg" | relURL }}" alt="{{ .Site.Title }}" width="32" height="32" loading="eager">
+            <span class="logo-text">{{ .Site.Title }}</span>
+        </a>
+
+        {{/* 主导航：Tools / Compare / Guides / Ranking / FAQ */}}
+        <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+            <a href="{{ "/tools/" | relLangURL }}" {{ if eq .Section "tools" }}class="active"{{ end }}>{{ T "nav_tools" | default "Tools" }}</a>
+            <a href="{{ "/compare/" | relLangURL }}" {{ if eq .Section "compare" }}class="active"{{ end }}>{{ T "nav_compare" | default "Compare" }}</a>
+            <a href="{{ "/guides/" | relLangURL }}" {{ if eq .Section "guides" }}class="active"{{ end }}>{{ T "nav_guides" | default "Guides" }}</a>
+            <a href="{{ "/ranking/" | relLangURL }}" {{ if eq .Section "ranking" }}class="active"{{ end }}>{{ T "nav_ranking" | default "Ranking" }}</a>
+            <a href="{{ "/faq/" | relLangURL }}" {{ if eq .Section "faq" }}class="active"{{ end }}>{{ T "nav_faq" | default "FAQ" }}</a>
+        </nav>
+
+        <div class="header-actions">
+            {{ partial "search-box.html" . }}
+            {{ partial "language-switcher.html" . }}
+
+            {{/* 移动端汉堡菜单按钮 */}}
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+    </div>
+</header>

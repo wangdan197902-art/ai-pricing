@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Chuyển tới nội dung"
+nav_home:
+  other: "Trang chủ"
+nav_tools:
+  other: "Công cụ"
+nav_compare:
+  other: "So sánh"
+nav_guides:
+  other: "Hướng dẫn"
+nav_ranking:
+  other: "Bảng xếp hạng"
+nav_faq:
+  other: "Câu hỏi thường gặp"
+search_title:
+  other: "Tìm kiếm"
+search_placeholder:
+  other: "Tìm công cụ AI, giá, hướng dẫn..."
+search_empty:
+  other: "Không tìm thấy kết quả"
+search_results:
+  other: "kết quả được tìm thấy"
+search_clear:
+  other: "Xóa"
+search_load_more:
+  other: "Tải thêm kết quả"
+search_label:
+  other: "Tìm kiếm trong trang"
+search_submit:
+  other: "Tìm kiếm"
+404_message:
+  other: "Rất tiếc! Không tìm thấy trang bạn đang tìm."
+404_hint:
+  other: "Trang có thể đã được di chuyển, xóa hoặc chưa từng tồn tại."
+404_popular:
+  other: "Công cụ AI phổ biến"
+back_to_home:
+  other: "Về trang chủ"
+browse_all_tools:
+  other: "Xem tất cả công cụ"
+popular_categories:
+  other: "Phổ biến"
+home_categories_title:
+  other: "Duyệt theo danh mục"
+home_recent_changes:
+  other: "Thay đổi giá gần đây"
+home_popular_comparisons:
+  other: "So sánh phổ biến"
+home_guides_title:
+  other: "Hướng dẫn tiết kiệm"
+tools:
+  other: "công cụ"
+view_all_tools:
+  other: "Xem tất cả công cụ"
+view_all_comparisons:
+  other: "Xem tất cả so sánh"
+view_all_guides:
+  other: "Xem tất cả hướng dẫn"
+view_pricing:
+  other: "Xem giá"
+reading_time:
+  other: "phút đọc"
+free_tier:
+  other: "Gói miễn phí"
+free_to_use:
+  other: "Miễn phí sử dụng"
+month:
+  other: "tháng"
+visit_official:
+  other: "Truy cập trang chính thức"
+tags:
+  other: "Thẻ"
+other_languages:
+  other: "Ngôn ngữ khác"
+previous:
+  other: "Trước"
+next:
+  other: "Tiếp"
+footer_explore:
+  other: "Khám phá"
+footer_company:
+  other: "Công ty"
+footer_legal:
+  other: "Pháp lý"
+footer_languages:
+  other: "Ngôn ngữ"
+footer_about:
+  other: "Giới thiệu"
+footer_contact:
+  other: "Liên hệ"
+footer_privacy:
+  other: "Chính sách bảo mật"
+footer_ftc:
+  other: "Tiết lộ FTC"
+footer_price_disclaimer:
+  other: "Miễn trừ về giá"
+footer_terms:
+  other: "Điều khoản dịch vụ"
+footer_disclaimer_text:
+  other: "Các mức giá và gói hiển thị chỉ mang tính tham khảo và có thể thay đổi. Hãy luôn xác minh trên trang web chính thức của nhà cung cấp trước khi mua. Chúng tôi có thể nhận hoa hồng liên kết từ một số liên kết."
+footer_rights:
+  other: "Mọi quyền được bảo lưu."
+total_count:
+  other: "Tổng"
+prev_page:
+  other: "Trước"
+next_page:
+  other: "Tiếp"
+no_results:
+  other: "Chưa có nội dung."
+switch_language:
+  other: "Đổi ngôn ngữ"

@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "ข้ามไปยังเนื้อหา"
+nav_home:
+  other: "หน้าแรก"
+nav_tools:
+  other: "เครื่องมือ"
+nav_compare:
+  other: "เปรียบเทียบ"
+nav_guides:
+  other: "คู่มือ"
+nav_ranking:
+  other: "อันดับ"
+nav_faq:
+  other: "คำถามที่พบบ่อย"
+search_title:
+  other: "ค้นหา"
+search_placeholder:
+  other: "ค้นหาเครื่องมือ AI ราคา คู่มือ..."
+search_empty:
+  other: "ไม่พบผลลัพธ์"
+search_results:
+  other: "ผลลัพธ์"
+search_clear:
+  other: "ล้าง"
+search_load_more:
+  other: "โหลดผลลัพธ์เพิ่มเติม"
+search_label:
+  other: "ค้นหาในเว็บไซต์"
+search_submit:
+  other: "ค้นหา"
+404_message:
+  other: "อุ้ย! ไม่พบหน้าที่คุณกำลังมองหา"
+404_hint:
+  other: "อาจถูกย้าย ลบ หรือไม่เคยมีอยู่จริง"
+404_popular:
+  other: "เครื่องมือ AI ยอดนิยม"
+back_to_home:
+  other: "กลับหน้าแรก"
+browse_all_tools:
+  other: "ดูเครื่องมือทั้งหมด"
+popular_categories:
+  other: "ยอดนิยม"
+home_categories_title:
+  other: "เรียกดูตามหมวดหมู่"
+home_recent_changes:
+  other: "การเปลี่ยนแปลงราคาล่าสุด"
+home_popular_comparisons:
+  other: "การเปรียบเทียบยอดนิยม"
+home_guides_title:
+  other: "คู่มือประหยัด"
+tools:
+  other: "เครื่องมือ"
+view_all_tools:
+  other: "ดูเครื่องมือทั้งหมด"
+view_all_comparisons:
+  other: "ดูการเปรียบเทียบทั้งหมด"
+view_all_guides:
+  other: "ดูคู่มือทั้งหมด"
+view_pricing:
+  other: "ดูราคา"
+reading_time:
+  other: "นาทีอ่าน"
+free_tier:
+  other: "แพ็กเกจฟรี"
+free_to_use:
+  other: "ใช้ฟรี"
+month:
+  other: "เดือน"
+visit_official:
+  other: "เยี่ยมชมเว็บไซต์ทางการ"
+tags:
+  other: "แท็ก"
+other_languages:
+  other: "ภาษาอื่น"
+previous:
+  other: "ก่อนหน้า"
+next:
+  other: "ถัดไป"
+footer_explore:
+  other: "สำรวจ"
+footer_company:
+  other: "บริษัท"
+footer_legal:
+  other: "ข้อกฎหมาย"
+footer_languages:
+  other: "ภาษา"
+footer_about:
+  other: "เกี่ยวกับเรา"
+footer_contact:
+  other: "ติดต่อ"
+footer_privacy:
+  other: "นโยบายความเป็นส่วนตัว"
+footer_ftc:
+  other: "การเปิดเผยข้อมูล FTC"
+footer_price_disclaimer:
+  other: "ข้อควรระวังเรื่องราคา"
+footer_terms:
+  other: "เงื่อนไขการให้บริการ"
+footer_disclaimer_text:
+  other: "ราคาและแพ็กเกจที่แสดงเป็นเพียงข้อมูลอ้างอิงเท่านั้นและอาจเปลี่ยนแปลงได้ โปรดตรวจสอบกับเว็บไซต์ทางการของผู้ให้บริการเสมอก่อนซื้อ เราอาจได้รับค่าคอมมิชชั่นพันธมิตรจากลิงก์บางส่วน"
+footer_rights:
+  other: "สงวนลิขสิทธิ์ทั้งหมด"
+total_count:
+  other: "รวมทั้งหมด"
+prev_page:
+  other: "ก่อนหน้า"
+next_page:
+  other: "ถัดไป"
+no_results:
+  other: "ยังไม่มีเนื้อหา"
+switch_language:
+  other: "เปลี่ยนภาษา"

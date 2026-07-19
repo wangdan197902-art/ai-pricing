@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Skip to content"
+nav_home:
+  other: "Home"
+nav_tools:
+  other: "Tools"
+nav_compare:
+  other: "Compare"
+nav_guides:
+  other: "Guides"
+nav_ranking:
+  other: "Ranking"
+nav_faq:
+  other: "FAQ"
+search_title:
+  other: "Search"
+search_placeholder:
+  other: "Search AI tools, prices, guides..."
+search_empty:
+  other: "No results found"
+search_results:
+  other: "results found"
+search_clear:
+  other: "Clear"
+search_load_more:
+  other: "Load more results"
+search_label:
+  other: "Site search"
+search_submit:
+  other: "Search"
+404_message:
+  other: "Oops! The page you are looking for was not found."
+404_hint:
+  other: "It may have been moved, deleted, or never existed."
+404_popular:
+  other: "Popular AI Tools"
+back_to_home:
+  other: "Back to Home"
+browse_all_tools:
+  other: "Browse all tools"
+popular_categories:
+  other: "Popular"
+home_categories_title:
+  other: "Browse by Category"
+home_recent_changes:
+  other: "Latest Price Changes"
+home_popular_comparisons:
+  other: "Popular Comparisons"
+home_guides_title:
+  other: "Saving Guides"
+tools:
+  other: "tools"
+view_all_tools:
+  other: "View all tools"
+view_all_comparisons:
+  other: "View all comparisons"
+view_all_guides:
+  other: "View all guides"
+view_pricing:
+  other: "View pricing"
+reading_time:
+  other: "min read"
+free_tier:
+  other: "Free tier"
+free_to_use:
+  other: "Free to use"
+month:
+  other: "mo"
+visit_official:
+  other: "Visit Official Site"
+tags:
+  other: "Tags"
+other_languages:
+  other: "Other languages"
+previous:
+  other: "Previous"
+next:
+  other: "Next"
+footer_explore:
+  other: "Explore"
+footer_company:
+  other: "Company"
+footer_legal:
+  other: "Legal"
+footer_languages:
+  other: "Languages"
+footer_about:
+  other: "About"
+footer_contact:
+  other: "Contact"
+footer_privacy:
+  other: "Privacy Policy"
+footer_ftc:
+  other: "FTC Disclosure"
+footer_price_disclaimer:
+  other: "Price Disclaimer"
+footer_terms:
+  other: "Terms of Service"
+footer_disclaimer_text:
+  other: "Prices and plans shown are for reference only and may change. Always verify on the official provider website before purchasing. We may earn affiliate commissions from some links."
+footer_rights:
+  other: "All rights reserved."
+total_count:
+  other: "Total"
+prev_page:
+  other: "Previous"
+next_page:
+  other: "Next"
+no_results:
+  other: "No content available yet."
+switch_language:
+  other: "Switch language"

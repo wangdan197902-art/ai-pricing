@@ -1,0 +1,77 @@
+name: Daily Translation
+
+on:
+  schedule:
+    # 每日北京时间 16:00 = UTC 8:00
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  PYTHON_VERSION: '3.11'
+  AGNES_LLM_API_KEY: ${{ secrets.AGNES_LLM_API_KEY }}
+  AGNES_LLM_BASE_URL: ${{ secrets.AGNES_LLM_BASE_URL }}
+  AGNES_LLM_MODEL: ${{ secrets.AGNES_LLM_MODEL }}
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: pip install openai requests
+
+      - name: Configure git
+        run: |
+          git config user.name "AI Pricing Bot"
+          git config user.email "bot@pricing.ai-term-hub.com"
+
+      - name: Run translation script
+        continue-on-error: true
+        run: |
+          python3 scripts/translate_content.py \
+            --dir content/en/tools \
+            --target-langs zh,es,fr,de,ja,ko,pt,ru,it,ar,nl,pl,tr,vi,th,id,sv,no,da \
+            --max-workers 5
+
+      - name: Check for translation changes
+        id: check_changes
+        run: |
+          if git diff --exit-code -- content/; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No translation changes detected."
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Translation changes detected."
+          fi
+
+      - name: Commit and push translation changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git add content/
+          git commit -m "chore(i18n): daily translation update $(date -u +'%Y-%m-%d')"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ "${{ steps.check_changes.outputs.changed }}" == "true" ]; then
+            echo "✅ 翻译已更新并提交。"
+          else
+            echo "ℹ️ 无翻译变更，跳过提交。"
+          fi

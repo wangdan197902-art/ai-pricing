@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Przejdź do treści"
+nav_home:
+  other: "Strona główna"
+nav_tools:
+  other: "Narzędzia"
+nav_compare:
+  other: "Porównaj"
+nav_guides:
+  other: "Poradniki"
+nav_ranking:
+  other: "Ranking"
+nav_faq:
+  other: "Najczęstsze pytania"
+search_title:
+  other: "Szukaj"
+search_placeholder:
+  other: "Szukaj narzędzi AI, cen, poradników..."
+search_empty:
+  other: "Brak wyników"
+search_results:
+  other: "wyników"
+search_clear:
+  other: "Wyczyść"
+search_load_more:
+  other: "Wczytaj więcej wyników"
+search_label:
+  other: "Szukaj na stronie"
+search_submit:
+  other: "Szukaj"
+404_message:
+  other: "Ups! Strona, której szukasz, nie została znaleziona."
+404_hint:
+  other: "Mogła zostać przeniesiona, usunięta lub nigdy nie istniała."
+404_popular:
+  other: "Popularne narzędzia AI"
+back_to_home:
+  other: "Wróć na stronę główną"
+browse_all_tools:
+  other: "Przeglądaj wszystkie narzędzia"
+popular_categories:
+  other: "Popularne"
+home_categories_title:
+  other: "Przeglądaj według kategorii"
+home_recent_changes:
+  other: "Najnowsze zmiany cen"
+home_popular_comparisons:
+  other: "Popularne porównania"
+home_guides_title:
+  other: "Poradniki oszczędzania"
+tools:
+  other: "narzędzi"
+view_all_tools:
+  other: "Zobacz wszystkie narzędzia"
+view_all_comparisons:
+  other: "Zobacz wszystkie porównania"
+view_all_guides:
+  other: "Zobacz wszystkie poradniki"
+view_pricing:
+  other: "Zobacz ceny"
+reading_time:
+  other: "min czytania"
+free_tier:
+  other: "Darmowy plan"
+free_to_use:
+  other: "Darmowe w użyciu"
+month:
+  other: "mies."
+visit_official:
+  other: "Odwiedź oficjalną stronę"
+tags:
+  other: "Tagi"
+other_languages:
+  other: "Inne języki"
+previous:
+  other: "Poprzednia"
+next:
+  other: "Następna"
+footer_explore:
+  other: "Odkryj"
+footer_company:
+  other: "Firma"
+footer_legal:
+  other: "Informacje prawne"
+footer_languages:
+  other: "Języki"
+footer_about:
+  other: "O nas"
+footer_contact:
+  other: "Kontakt"
+footer_privacy:
+  other: "Polityka prywatności"
+footer_ftc:
+  other: "Ujawnienie FTC"
+footer_price_disclaimer:
+  other: "Zastrzeżenie dotyczące cen"
+footer_terms:
+  other: "Regulamin"
+footer_disclaimer_text:
+  other: "Wyświetlane ceny i plany mają charakter wyłącznie poglądowy i mogą ulec zmianie. Przed zakupem zawsze sprawdź informacje na oficjalnej stronie dostawcy. Z niektórych linków możemy otrzymywać prowizje partnerskie."
+footer_rights:
+  other: "Wszelkie prawa zastrzeżone."
+total_count:
+  other: "Razem"
+prev_page:
+  other: "Poprzednia"
+next_page:
+  other: "Następna"
+no_results:
+  other: "Brak dostępnych treści."
+switch_language:
+  other: "Zmień język"

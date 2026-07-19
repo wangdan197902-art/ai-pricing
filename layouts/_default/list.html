@@ -1,0 +1,83 @@
+{{ define "main" }}
+{{/* 列表页模板：工具列表 / 分类列表 / 攻略列表等 */}}
+<section class="list-page" data-pagefind-body>
+    {{/* 面包屑 */}}
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="{{ "/" | relLangURL }}">{{ T "nav_home" | default "Home" }}</a></li>
+            <li aria-current="page">{{ .Title }}</li>
+        </ol>
+    </nav>
+
+    {{/* 页面标题 */}}
+    <header class="list-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="list-description">{{ . }}</p>
+        {{ end }}
+
+        {{/* 列表页元信息 */}}
+        <div class="list-meta">
+            <span class="list-count">{{ T "total_count" | default "Total" }}: {{ .Pages.Len }}</span>
+            {{/* 多语言切换 */}}
+            <span class="list-lang-switch" data-pagefind-ignore>
+                {{ partial "language-switcher.html" . }}
+            </span>
+        </div>
+    </header>
+
+    {{/* 列表内容（如有） */}}
+    {{ with .Content }}
+    <div class="list-intro">
+        {{ . }}
+    </div>
+    {{ end }}
+
+    {{/* 工具卡片网格：tools 类型使用专用 tool-card，其他用通用 card */}}
+    {{ if .Pages }}
+    <div class="tool-grid">
+        {{ range .Pages }}
+            {{ if eq .Type "tools" }}
+                {{ partial "tool-card.html" . }}
+            {{ else }}
+            <article class="card generic-card" data-pagefind-body>
+                <a href="{{ .RelPermalink }}" class="card-link">
+                    <h2 class="card-title">{{ .Title }}</h2>
+                    <p class="card-description">
+                        {{ .Description | default (plainify .Summary | truncate 140) }}
+                    </p>
+                    <span class="card-meta">
+                        {{ if not .PublishDate.IsZero }}
+                        <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "2006-01-02" }}</time>
+                        {{ end }}
+                    </span>
+                </a>
+            </article>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    {{/* 分页 */}}
+    {{ if gt .Paginator.TotalPages 1 }}
+    <nav class="pagination" aria-label="Pagination" data-pagefind-ignore>
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="page-prev" rel="prev">← {{ T "prev_page" | default "Previous" }}</a>
+        {{ end }}
+
+        <span class="page-info">
+            {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}
+        </span>
+
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}" class="page-next" rel="next">{{ T "next_page" | default "Next" }} →</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+
+    {{ else }}
+    <div class="empty-state">
+        <p>{{ T "no_results" | default "No content available yet." }}</p>
+    </div>
+    {{ end }}
+</section>
+{{ end }}

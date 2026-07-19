@@ -1,0 +1,84 @@
+# Netlify 配置文件 — AI Tools Pricing Hub
+# 站点: pricing.ai-term-hub.com
+
+[build]
+  publish = "public"
+  command = "bash scripts/build.sh --no-ai"
+  ignore = "git diff --quiet HEAD^ HEAD -- content/ data/ layouts/ static/ hugo.toml scripts/"
+
+[build.environment]
+  HUGO_VERSION = "0.164.0"
+  HUGO_ENV = "production"
+  NODE_VERSION = "20"
+  PYTHON_VERSION = "3.11"
+  GO_VERSION = "1.22"
+
+# 自定义域名配置
+[[redirects]]
+  from = "https://ai-pricing.netlify.app/*"
+  to = "https://pricing.ai-term-hub.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://pricing.ai-term-hub.com/*"
+  to = "https://pricing.ai-term-hub.com/:splat"
+  status = 301
+  force = true
+
+# 404 页面
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# 安全头
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# 静态资源缓存
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/pagefind/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# HTML 不缓存（保证内容更新）
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# sitemap
+[[headers]]
+  for = "/sitemap*.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "application/xml; charset=utf-8"
+
+# robots.txt
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "text/plain; charset=utf-8"

@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "跳至内容"
+nav_home:
+  other: "首页"
+nav_tools:
+  other: "工具"
+nav_compare:
+  other: "对比"
+nav_guides:
+  other: "攻略"
+nav_ranking:
+  other: "排行榜"
+nav_faq:
+  other: "常见问题"
+search_title:
+  other: "搜索"
+search_placeholder:
+  other: "搜索 AI 工具、价格、攻略..."
+search_empty:
+  other: "未找到结果"
+search_results:
+  other: "条结果"
+search_clear:
+  other: "清除"
+search_load_more:
+  other: "加载更多结果"
+search_label:
+  other: "站内搜索"
+search_submit:
+  other: "搜索"
+404_message:
+  other: "哎呀！您要找的页面未找到。"
+404_hint:
+  other: "页面可能已被移动、删除或从未存在。"
+404_popular:
+  other: "热门 AI 工具"
+back_to_home:
+  other: "返回首页"
+browse_all_tools:
+  other: "浏览所有工具"
+popular_categories:
+  other: "热门"
+home_categories_title:
+  other: "按分类浏览"
+home_recent_changes:
+  other: "最新价格变动"
+home_popular_comparisons:
+  other: "热门对比"
+home_guides_title:
+  other: "省钱攻略"
+tools:
+  other: "款工具"
+view_all_tools:
+  other: "查看所有工具"
+view_all_comparisons:
+  other: "查看所有对比"
+view_all_guides:
+  other: "查看所有攻略"
+view_pricing:
+  other: "查看价格"
+reading_time:
+  other: "分钟阅读"
+free_tier:
+  other: "免费版"
+free_to_use:
+  other: "免费使用"
+month:
+  other: "月"
+visit_official:
+  other: "访问官网"
+tags:
+  other: "标签"
+other_languages:
+  other: "其他语言"
+previous:
+  other: "上一页"
+next:
+  other: "下一页"
+footer_explore:
+  other: "探索"
+footer_company:
+  other: "公司"
+footer_legal:
+  other: "法律"
+footer_languages:
+  other: "语言"
+footer_about:
+  other: "关于我们"
+footer_contact:
+  other: "联系我们"
+footer_privacy:
+  other: "隐私政策"
+footer_ftc:
+  other: "FTC 披露"
+footer_price_disclaimer:
+  other: "价格免责声明"
+footer_terms:
+  other: "服务条款"
+footer_disclaimer_text:
+  other: "所示价格和套餐仅供参考，可能发生变化。购买前请务必在官方提供商网站核实。我们可能从部分链接获得联盟佣金。"
+footer_rights:
+  other: "保留所有权利。"
+total_count:
+  other: "共"
+prev_page:
+  other: "上一页"
+next_page:
+  other: "下一页"
+no_results:
+  other: "暂无内容。"
+switch_language:
+  other: "切换语言"

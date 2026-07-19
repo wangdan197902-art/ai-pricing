@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Naar inhoud springen"
+nav_home:
+  other: "Home"
+nav_tools:
+  other: "Tools"
+nav_compare:
+  other: "Vergelijken"
+nav_guides:
+  other: "Gidsen"
+nav_ranking:
+  other: "Ranking"
+nav_faq:
+  other: "Veelgestelde vragen"
+search_title:
+  other: "Zoeken"
+search_placeholder:
+  other: "Zoek AI-tools, prijzen, gidsen..."
+search_empty:
+  other: "Geen resultaten gevonden"
+search_results:
+  other: "resultaten gevonden"
+search_clear:
+  other: "Wissen"
+search_load_more:
+  other: "Meer resultaten laden"
+search_label:
+  other: "Zoeken op site"
+search_submit:
+  other: "Zoeken"
+404_message:
+  other: "Oeps! De pagina die je zoekt is niet gevonden."
+404_hint:
+  other: "Deze is mogelijk verplaatst, verwijderd of heeft nooit bestaan."
+404_popular:
+  other: "Populaire AI-tools"
+back_to_home:
+  other: "Terug naar home"
+browse_all_tools:
+  other: "Alle tools bekijken"
+popular_categories:
+  other: "Populair"
+home_categories_title:
+  other: "Bladeren per categorie"
+home_recent_changes:
+  other: "Laatste prijswijzigingen"
+home_popular_comparisons:
+  other: "Populaire vergelijkingen"
+home_guides_title:
+  other: "Bespaargidsen"
+tools:
+  other: "tools"
+view_all_tools:
+  other: "Alle tools bekijken"
+view_all_comparisons:
+  other: "Alle vergelijkingen bekijken"
+view_all_guides:
+  other: "Alle gidsen bekijken"
+view_pricing:
+  other: "Prijzen bekijken"
+reading_time:
+  other: "min leestijd"
+free_tier:
+  other: "Gratis versie"
+free_to_use:
+  other: "Gratis te gebruiken"
+month:
+  other: "mnd"
+visit_official:
+  other: "Officiële website bezoeken"
+tags:
+  other: "Tags"
+other_languages:
+  other: "Andere talen"
+previous:
+  other: "Vorige"
+next:
+  other: "Volgende"
+footer_explore:
+  other: "Ontdek"
+footer_company:
+  other: "Bedrijf"
+footer_legal:
+  other: "Juridisch"
+footer_languages:
+  other: "Talen"
+footer_about:
+  other: "Over ons"
+footer_contact:
+  other: "Contact"
+footer_privacy:
+  other: "Privacybeleid"
+footer_ftc:
+  other: "FTC-verklaring"
+footer_price_disclaimer:
+  other: "Prijsdisclaimer"
+footer_terms:
+  other: "Servicevoorwaarden"
+footer_disclaimer_text:
+  other: "Getoonde prijzen en abonnementen zijn alleen bedoeld als referentie en kunnen veranderen. Verifieer altijd op de officiële website van de provider voordat je koopt. We kunnen affiliate-commissies verdienen via sommige links."
+footer_rights:
+  other: "Alle rechten voorbehouden."
+total_count:
+  other: "Totaal"
+prev_page:
+  other: "Vorige"
+next_page:
+  other: "Volgende"
+no_results:
+  other: "Nog geen content beschikbaar."
+switch_language:
+  other: "Taal wijzigen"

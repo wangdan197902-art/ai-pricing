@@ -1,0 +1,64 @@
+{{/* 工具卡片：显示工具名 / 图标 / 价格区间 / 分类 / 查看价格按钮 */}}
+{{/* 上下文：传入 . 为单个 tool 页面对象 */}}
+<article class="tool-card" data-pagefind-body>
+    <a href="{{ .RelPermalink }}" class="tool-card-link" aria-label="{{ .Title }} - {{ T "view_pricing" | default "View pricing" }}">
+        <div class="tool-card-header">
+            {{/* 工具图标：优先 Params.logo，其次 emoji 占位 */}}
+            {{ if .Params.logo }}
+            <img src="{{ .Params.logo | relURL }}" alt="{{ .Title }} logo" class="tool-icon" width="48" height="48" loading="lazy">
+            {{ else if .Params.icon }}
+            <span class="tool-icon-emoji" aria-hidden="true">{{ .Params.icon }}</span>
+            {{ else }}
+            <span class="tool-icon-placeholder" aria-hidden="true">{{ substr .Title 0 1 }}</span>
+            {{ end }}
+
+            <div class="tool-card-title">
+                <h3>{{ .Title }}</h3>
+                {{ with .Params.brand }}
+                <span class="tool-brand">{{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="tool-card-body">
+            {{/* 简述：Params.tagline 或 Description 或 Summary */}}
+            <p class="tool-description">
+                {{ .Params.tagline | default .Description | default (plainify .Summary | truncate 120) }}
+            </p>
+
+            {{/* 价格区间显示 */}}
+            <div class="tool-pricing">
+                {{ if .Params.free_tier }}
+                <span class="price-tag free">{{ T "free_tier" | default "Free tier" }}</span>
+                {{ end }}
+                {{ with .Params.price_min }}
+                <span class="price-tag price">
+                    {{ if and $.Params.price_max (ne $.Params.price_max .) }}
+                        {{ $.Params.currency | default "$" }}{{ . }} - {{ $.Params.currency | default "$" }}{{ $.Params.price_max }}<span class="price-period">/{{ T "month" | default "mo" }}</span>
+                    {{ else }}
+                        {{ $.Params.currency | default "$" }}{{ . }}<span class="price-period">/{{ T "month" | default "mo" }}</span>
+                    {{ end }}
+                </span>
+                {{ else }}
+                    {{ if $.Params.free_tier }}
+                    <span class="price-tag free-only">{{ T "free_to_use" | default "Free to use" }}</span>
+                    {{ end }}
+                {{ end }}
+            </div>
+
+            {{/* 分类标签 */}}
+            {{ with .Params.category }}
+            <div class="tool-category">
+                <span class="category-pill">{{ . }}</span>
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="tool-card-footer">
+            <span class="btn btn-primary btn-sm view-pricing-btn">
+                {{ T "view_pricing" | default "View pricing" }}
+                <span aria-hidden="true">→</span>
+            </span>
+        </div>
+    </a>
+</article>

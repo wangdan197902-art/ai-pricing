@@ -1,0 +1,145 @@
+baseURL = "https://pricing.ai-term-hub.com/"
+languageCode = "en-us"
+title = "AI Tools Pricing"
+DefaultContentLanguage = "en"
+enableRobotsTXT = true
+enableEmoji = false
+enableGitInfo = false
+paginate = 1000
+disableKinds = ["taxonomy", "term", "RSS"]
+timeout = "600s"
+printPathWarnings = false
+printUnusedTemplates = false
+logLevel = "error"
+
+[params]
+  description = "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages."
+  author = "AI Pricing Hub"
+  site_url = "https://pricing.ai-term-hub.com"
+  default_og_image = "/images/og-default.svg"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  tool_type = "types"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+    title = "AI Tools Pricing"
+    [languages.en.params]
+      description = "Compare AI tools pricing, features and find the best deals."
+  [languages.zh]
+    languageName = "中文"
+    languageCode = "zh-cn"
+    weight = 2
+    title = "AI工具价格对比"
+    [languages.zh.params]
+      description = "对比AI工具价格、功能,寻找最佳优惠。"
+  [languages.es]
+    languageName = "Español"
+    languageCode = "es-es"
+    weight = 3
+    title = "Precios de Herramientas IA"
+  [languages.fr]
+    languageName = "Français"
+    languageCode = "fr-fr"
+    weight = 4
+    title = "Prix des Outils IA"
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de-de"
+    weight = 5
+    title = "KI-Tools Preise"
+  [languages.ja]
+    languageName = "日本語"
+    languageCode = "ja-jp"
+    weight = 6
+    title = "AIツール価格比較"
+  [languages.ko]
+    languageName = "한국어"
+    languageCode = "ko-kr"
+    weight = 7
+    title = "AI도구 가격비교"
+  [languages.pt]
+    languageName = "Português"
+    languageCode = "pt-pt"
+    weight = 8
+    title = "Preços de Ferramentas IA"
+  [languages.ru]
+    languageName = "Русский"
+    languageCode = "ru-ru"
+    weight = 9
+    title = "Цены на ИИ-инструменты"
+  [languages.it]
+    languageName = "Italiano"
+    languageCode = "it-it"
+    weight = 10
+    title = "Prezzi Strumenti IA"
+  [languages.ar]
+    languageName = "العربية"
+    languageCode = "ar-sa"
+    weight = 11
+    title = "أسعار أدوات الذكاء الاصطناعي"
+    [languages.ar.params]
+      rtl = true
+  [languages.nl]
+    languageName = "Nederlands"
+    languageCode = "nl-nl"
+    weight = 12
+    title = "AI-tools Prijzen"
+  [languages.pl]
+    languageName = "Polski"
+    languageCode = "pl-pl"
+    weight = 13
+    title = "Ceny Narzędzi AI"
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr-tr"
+    weight = 14
+    title = "AI Araçları Fiyatları"
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    languageCode = "vi-vn"
+    weight = 15
+    title = "Giá Công cụ AI"
+  [languages.th]
+    languageName = "ไทย"
+    languageCode = "th-th"
+    weight = 16
+    title = "ราคาเครื่องมือ AI"
+  [languages.id]
+    languageName = "Indonesia"
+    languageCode = "id-id"
+    weight = 17
+    title = "Harga Alat AI"
+  [languages.sv]
+    languageName = "Svenska"
+    languageCode = "sv-se"
+    weight = 18
+    title = "AI-verktyg Priser"
+  [languages.no]
+    languageName = "Norsk"
+    languageCode = "nb-no"
+    weight = 19
+    title = "AI-verktøy Priser"
+  [languages.da]
+    languageName = "Dansk"
+    languageCode = "da-dk"
+    weight = 20
+    title = "AI-værktøjer Priser"

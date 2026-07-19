@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Spring til indhold"
+nav_home:
+  other: "Forside"
+nav_tools:
+  other: "Værktøjer"
+nav_compare:
+  other: "Sammenlign"
+nav_guides:
+  other: "Vejledninger"
+nav_ranking:
+  other: "Rangliste"
+nav_faq:
+  other: "Ofte stillede spørgsmål"
+search_title:
+  other: "Søg"
+search_placeholder:
+  other: "Søg AI-værktøjer, priser, vejledninger..."
+search_empty:
+  other: "Ingen resultater fundet"
+search_results:
+  other: "resultater fundet"
+search_clear:
+  other: "Ryd"
+search_load_more:
+  other: "Indlæs flere resultater"
+search_label:
+  other: "Søg på webstedet"
+search_submit:
+  other: "Søg"
+404_message:
+  other: "Hovsa! Siden, du leder efter, blev ikke fundet."
+404_hint:
+  other: "Den kan være blevet flyttet, slettet eller have aldrig eksisteret."
+404_popular:
+  other: "Populære AI-værktøjer"
+back_to_home:
+  other: "Tilbage til forsiden"
+browse_all_tools:
+  other: "Gennemse alle værktøjer"
+popular_categories:
+  other: "Populært"
+home_categories_title:
+  other: "Gennemse efter kategori"
+home_recent_changes:
+  other: "Seneste prisændringer"
+home_popular_comparisons:
+  other: "Populære sammenligninger"
+home_guides_title:
+  other: "Sparevejledninger"
+tools:
+  other: "værktøjer"
+view_all_tools:
+  other: "Vis alle værktøjer"
+view_all_comparisons:
+  other: "Vis alle sammenligninger"
+view_all_guides:
+  other: "Vis alle vejledninger"
+view_pricing:
+  other: "Se priser"
+reading_time:
+  other: "min læsning"
+free_tier:
+  other: "Gratisversion"
+free_to_use:
+  other: "Gratis at bruge"
+month:
+  other: "md"
+visit_official:
+  other: "Besøg officiel hjemmeside"
+tags:
+  other: "Tags"
+other_languages:
+  other: "Andre sprog"
+previous:
+  other: "Forrige"
+next:
+  other: "Næste"
+footer_explore:
+  other: "Udforsk"
+footer_company:
+  other: "Virksomhed"
+footer_legal:
+  other: "Juridisk"
+footer_languages:
+  other: "Sprog"
+footer_about:
+  other: "Om os"
+footer_contact:
+  other: "Kontakt"
+footer_privacy:
+  other: "Privatlivspolitik"
+footer_ftc:
+  other: "FTC-oplysning"
+footer_price_disclaimer:
+  other: "Prisansvarsfraskrivelse"
+footer_terms:
+  other: "Tjenestevilkår"
+footer_disclaimer_text:
+  other: "Viste priser og pakker er kun til reference og kan ændres. Bekræft altid på udbyderens officielle hjemmeside inden køb. Vi kan tjene affiliate-provisioner fra nogle links."
+footer_rights:
+  other: "Alle rettigheder forbeholdes."
+total_count:
+  other: "Total"
+prev_page:
+  other: "Forrige"
+next_page:
+  other: "Næste"
+no_results:
+  other: "Intet indhold tilgængeligt endnu."
+switch_language:
+  other: "Skift sprog"

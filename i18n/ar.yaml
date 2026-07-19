@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "تخطٍ إلى المحتوى"
+nav_home:
+  other: "الرئيسية"
+nav_tools:
+  other: "الأدوات"
+nav_compare:
+  other: "مقارنة"
+nav_guides:
+  other: "أدلة"
+nav_ranking:
+  other: "الترتيب"
+nav_faq:
+  other: "الأسئلة الشائعة"
+search_title:
+  other: "بحث"
+search_placeholder:
+  other: "ابحث عن أدوات الذكاء الاصطناعي والأسعار والأدلة..."
+search_empty:
+  other: "لا توجد نتائج"
+search_results:
+  other: "نتيجة"
+search_clear:
+  other: "مسح"
+search_load_more:
+  other: "تحميل المزيد من النتائج"
+search_label:
+  other: "بحث في الموقع"
+search_submit:
+  other: "بحث"
+404_message:
+  other: "عذرًا! الصفحة التي تبحث عنها غير موجودة."
+404_hint:
+  other: "قد تكون قد نُقلت أو حُذفت أو لم تكن موجودة أصلًا."
+404_popular:
+  other: "أدوات الذكاء الاصطناعي الشائعة"
+back_to_home:
+  other: "العودة إلى الرئيسية"
+browse_all_tools:
+  other: "تصفح جميع الأدوات"
+popular_categories:
+  other: "شائع"
+home_categories_title:
+  other: "تصفح حسب الفئة"
+home_recent_changes:
+  other: "أحدث تغييرات الأسعار"
+home_popular_comparisons:
+  other: "مقارنات شائعة"
+home_guides_title:
+  other: "أدلة التوفير"
+tools:
+  other: "أداة"
+view_all_tools:
+  other: "عرض جميع الأدوات"
+view_all_comparisons:
+  other: "عرض جميع المقارنات"
+view_all_guides:
+  other: "عرض جميع الأدلة"
+view_pricing:
+  other: "عرض الأسعار"
+reading_time:
+  other: "دقيقة قراءة"
+free_tier:
+  other: "الباقة المجانية"
+free_to_use:
+  other: "مجاني للاستخدام"
+month:
+  other: "شهر"
+visit_official:
+  other: "زيارة الموقع الرسمي"
+tags:
+  other: "الوسوم"
+other_languages:
+  other: "لغات أخرى"
+previous:
+  other: "السابق"
+next:
+  other: "التالي"
+footer_explore:
+  other: "استكشف"
+footer_company:
+  other: "الشركة"
+footer_legal:
+  other: "قانوني"
+footer_languages:
+  other: "اللغات"
+footer_about:
+  other: "حول"
+footer_contact:
+  other: "اتصل بنا"
+footer_privacy:
+  other: "سياسة الخصوصية"
+footer_ftc:
+  other: "إفصاح FTC"
+footer_price_disclaimer:
+  other: "إخلاء مسؤولية الأسعار"
+footer_terms:
+  other: "شروط الخدمة"
+footer_disclaimer_text:
+  other: "الأسعار والخطوط المعروضة للاسترشاد فقط وقد تتغير. تحقق دائمًا من الموقع الرسمي للمزود قبل الشراء. قد نحصل على عمولات تابعة من بعض الروابط."
+footer_rights:
+  other: "جميع الحقوق محفوظة."
+total_count:
+  other: "الإجمالي"
+prev_page:
+  other: "السابق"
+next_page:
+  other: "التالي"
+no_results:
+  other: "لا يوجد محتوى متاح حاليًا."
+switch_language:
+  other: "تبديل اللغة"

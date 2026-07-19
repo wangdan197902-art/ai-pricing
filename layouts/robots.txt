@@ -1,0 +1,19 @@
+# robots.txt for AI Tools Pricing Hub
+# Site: https://pricing.ai-term-hub.com/
+# Reference: https://developers.google.com/search/docs/crawling-indexing/robots
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Block search result pages from indexing (avoid duplicate / thin content)
+Disallow: /search/
+Disallow: /search?q=
+Disallow: /*/search?q=
+Disallow: /pagefind/
+
+# Crawl delay for politeness
+Crawl-delay: 1
+
+# Sitemap location (production baseURL)
+Sitemap: {{ "sitemap.xml" | absURL }}

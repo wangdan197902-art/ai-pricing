@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "コンテンツへスキップ"
+nav_home:
+  other: "ホーム"
+nav_tools:
+  other: "ツール"
+nav_compare:
+  other: "比較"
+nav_guides:
+  other: "ガイド"
+nav_ranking:
+  other: "ランキング"
+nav_faq:
+  other: "よくある質問"
+search_title:
+  other: "検索"
+search_placeholder:
+  other: "AIツール、価格、ガイドを検索..."
+search_empty:
+  other: "結果が見つかりません"
+search_results:
+  other: "件の結果"
+search_clear:
+  other: "クリア"
+search_load_more:
+  other: "もっと見る"
+search_label:
+  other: "サイト内検索"
+search_submit:
+  other: "検索"
+404_message:
+  other: "おっと！お探しのページが見つかりませんでした。"
+404_hint:
+  other: "ページは移動、削除されたか、存在しなかった可能性があります。"
+404_popular:
+  other: "人気のAIツール"
+back_to_home:
+  other: "ホームに戻る"
+browse_all_tools:
+  other: "すべてのツールを見る"
+popular_categories:
+  other: "人気"
+home_categories_title:
+  other: "カテゴリーから探す"
+home_recent_changes:
+  other: "最新の価格変更"
+home_popular_comparisons:
+  other: "人気の比較"
+home_guides_title:
+  other: "節約ガイド"
+tools:
+  other: "ツール"
+view_all_tools:
+  other: "すべてのツールを見る"
+view_all_comparisons:
+  other: "すべての比較を見る"
+view_all_guides:
+  other: "すべてのガイドを見る"
+view_pricing:
+  other: "価格を見る"
+reading_time:
+  other: "分で読了"
+free_tier:
+  other: "無料プラン"
+free_to_use:
+  other: "無料で利用可能"
+month:
+  other: "月"
+visit_official:
+  other: "公式サイトを見る"
+tags:
+  other: "タグ"
+other_languages:
+  other: "その他の言語"
+previous:
+  other: "前へ"
+next:
+  other: "次へ"
+footer_explore:
+  other: "探す"
+footer_company:
+  other: "会社"
+footer_legal:
+  other: "法的"
+footer_languages:
+  other: "言語"
+footer_about:
+  other: "私たちについて"
+footer_contact:
+  other: "お問い合わせ"
+footer_privacy:
+  other: "プライバシーポリシー"
+footer_ftc:
+  other: "FTC開示"
+footer_price_disclaimer:
+  other: "価格に関する免責事項"
+footer_terms:
+  other: "利用規約"
+footer_disclaimer_text:
+  other: "表示されている価格やプランは参考用であり、変更される場合があります。購入前に必ず公式プロバイダーのウェブサイトで確認してください。一部のリンクからアフィリエイトコミッションを得る場合があります。"
+footer_rights:
+  other: "すべての権利を留保します。"
+total_count:
+  other: "合計"
+prev_page:
+  other: "前へ"
+next_page:
+  other: "次へ"
+no_results:
+  other: "まだコンテンツがありません。"
+switch_language:
+  other: "言語を切り替え"

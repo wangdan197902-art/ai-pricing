@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode }}" dir="{{ if or .Params.rtl (eq .Site.Language.Lang "ar") }}rtl{{ else }}ltr{{ end }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo {{ hugo.Version }}">
+    <meta name="base-url" content="https://pricing.ai-term-hub.com/">
+
+    {{/* SEO meta 标签 + Open Graph + Twitter Card + hreflang */}}
+    {{ partial "seo.html" . }}
+
+    {{/* JSON-LD 结构化数据：WebSite / BreadcrumbList / Product / FAQPage / Article */}}
+    {{ partial "structured-data.html" . }}
+
+    {{/* 站点图标与订阅 */}}
+    <link rel="icon" href="{{ "favicon.svg" | relURL }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}'>
+
+    {{/* 深色主题样式 + 站点样式 */}}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/search.css" | relURL }}">
+
+    {{/* Pagefind 搜索 UI 样式：全局加载便于 header 搜索框使用 */}}
+    <link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}">
+
+    {{ block "head" . }}{{ end }}
+</head>
+<body class="{{ if eq .Site.Language.Lang "ar" }}rtl{{ end }}">
+    <a href="#main-content" class="skip-link">{{ T "skip_to_content" | default "Skip to content" }}</a>
+
+    {{ partial "header.html" . }}
+
+    <main class="container" id="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{/* 站点主脚本 */}}
+    <script src="{{ "js/main.js" | relURL }}" defer></script>
+
+    {{/* Pagefind 搜索 UI 脚本：在搜索页/首页/404 通过 block "scripts" 注入额外逻辑 */}}
+    <script src="{{ "pagefind/pagefind-ui.js" | relURL }}" defer></script>
+
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>

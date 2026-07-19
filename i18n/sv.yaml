@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Hoppa till innehåll"
+nav_home:
+  other: "Hem"
+nav_tools:
+  other: "Verktyg"
+nav_compare:
+  other: "Jämför"
+nav_guides:
+  other: "Guider"
+nav_ranking:
+  other: "Ranking"
+nav_faq:
+  other: "Vanliga frågor"
+search_title:
+  other: "Sök"
+search_placeholder:
+  other: "Sök AI-verktyg, priser, guider..."
+search_empty:
+  other: "Inga resultat hittades"
+search_results:
+  other: "resultat hittades"
+search_clear:
+  other: "Rensa"
+search_load_more:
+  other: "Ladda fler resultat"
+search_label:
+  other: "Sök på webbplatsen"
+search_submit:
+  other: "Sök"
+404_message:
+  other: "Oops! Sidan du letar efter hittades inte."
+404_hint:
+  other: "Den kan ha flyttats, raderats eller aldrig funnits."
+404_popular:
+  other: "Populära AI-verktyg"
+back_to_home:
+  other: "Tillbaka till startsidan"
+browse_all_tools:
+  other: "Bläddra bland alla verktyg"
+popular_categories:
+  other: "Populärt"
+home_categories_title:
+  other: "Bläddra efter kategori"
+home_recent_changes:
+  other: "Senaste prisändringar"
+home_popular_comparisons:
+  other: "Populära jämförelser"
+home_guides_title:
+  other: "Sparguider"
+tools:
+  other: "verktyg"
+view_all_tools:
+  other: "Visa alla verktyg"
+view_all_comparisons:
+  other: "Visa alla jämförelser"
+view_all_guides:
+  other: "Visa alla guider"
+view_pricing:
+  other: "Visa priser"
+reading_time:
+  other: "min lästid"
+free_tier:
+  other: "Gratisversion"
+free_to_use:
+  other: "Gratis att använda"
+month:
+  other: "mån"
+visit_official:
+  other: "Besök officiell webbplats"
+tags:
+  other: "Taggar"
+other_languages:
+  other: "Andra språk"
+previous:
+  other: "Föregående"
+next:
+  other: "Nästa"
+footer_explore:
+  other: "Utforska"
+footer_company:
+  other: "Företag"
+footer_legal:
+  other: "Juridik"
+footer_languages:
+  other: "Språk"
+footer_about:
+  other: "Om oss"
+footer_contact:
+  other: "Kontakt"
+footer_privacy:
+  other: "Integritetspolicy"
+footer_ftc:
+  other: "FTC-upplysning"
+footer_price_disclaimer:
+  other: "Prisansvar"
+footer_terms:
+  other: "Användarvillkor"
+footer_disclaimer_text:
+  other: "Visade priser och paket är endast referens och kan ändras. Verifiera alltid på leverantörens officiella webbplats innan köp. Vi kan tjäna affiliate-provisioner på vissa länkar."
+footer_rights:
+  other: "Alla rättigheter förbehållna."
+total_count:
+  other: "Totalt"
+prev_page:
+  other: "Föregående"
+next_page:
+  other: "Nästa"
+no_results:
+  other: "Inget innehåll tillgängligt ännu."
+switch_language:
+  other: "Byt språk"

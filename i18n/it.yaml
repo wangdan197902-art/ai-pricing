@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Vai al contenuto"
+nav_home:
+  other: "Home"
+nav_tools:
+  other: "Strumenti"
+nav_compare:
+  other: "Confronta"
+nav_guides:
+  other: "Guide"
+nav_ranking:
+  other: "Classifica"
+nav_faq:
+  other: "Domande frequenti"
+search_title:
+  other: "Cerca"
+search_placeholder:
+  other: "Cerca strumenti IA, prezzi, guide..."
+search_empty:
+  other: "Nessun risultato trovato"
+search_results:
+  other: "risultati trovati"
+search_clear:
+  other: "Cancella"
+search_load_more:
+  other: "Carica altri risultati"
+search_label:
+  other: "Cerca nel sito"
+search_submit:
+  other: "Cerca"
+404_message:
+  other: "Ops! La pagina che cerchi non è stata trovata."
+404_hint:
+  other: "Potrebbe essere stata spostata, eliminata o non essere mai esistita."
+404_popular:
+  other: "Strumenti IA popolari"
+back_to_home:
+  other: "Torna alla home"
+browse_all_tools:
+  other: "Sfoglia tutti gli strumenti"
+popular_categories:
+  other: "Popolare"
+home_categories_title:
+  other: "Sfoglia per categoria"
+home_recent_changes:
+  other: "Ultimi cambiamenti di prezzo"
+home_popular_comparisons:
+  other: "Confronti popolari"
+home_guides_title:
+  other: "Guide al risparmio"
+tools:
+  other: "strumenti"
+view_all_tools:
+  other: "Vedi tutti gli strumenti"
+view_all_comparisons:
+  other: "Vedi tutti i confronti"
+view_all_guides:
+  other: "Vedi tutte le guide"
+view_pricing:
+  other: "Vedi i prezzi"
+reading_time:
+  other: "min di lettura"
+free_tier:
+  other: "Piano gratuito"
+free_to_use:
+  other: "Gratis da usare"
+month:
+  other: "mese"
+visit_official:
+  other: "Visita il sito ufficiale"
+tags:
+  other: "Tag"
+other_languages:
+  other: "Altre lingue"
+previous:
+  other: "Precedente"
+next:
+  other: "Successivo"
+footer_explore:
+  other: "Esplora"
+footer_company:
+  other: "Azienda"
+footer_legal:
+  other: "Legale"
+footer_languages:
+  other: "Lingue"
+footer_about:
+  other: "Chi siamo"
+footer_contact:
+  other: "Contatti"
+footer_privacy:
+  other: "Informativa sulla privacy"
+footer_ftc:
+  other: "Divulgazione FTC"
+footer_price_disclaimer:
+  other: "Avvertenza sui prezzi"
+footer_terms:
+  other: "Termini di servizio"
+footer_disclaimer_text:
+  other: "I prezzi e i piani mostrati sono solo di riferimento e possono cambiare. Verifica sempre sul sito ufficiale del provider prima di acquistare. Potremmo guadagnare commissioni di affiliazione da alcuni link."
+footer_rights:
+  other: "Tutti i diritti riservati."
+total_count:
+  other: "Totale"
+prev_page:
+  other: "Precedente"
+next_page:
+  other: "Successivo"
+no_results:
+  other: "Nessun contenuto disponibile al momento."
+switch_language:
+  other: "Cambia lingua"

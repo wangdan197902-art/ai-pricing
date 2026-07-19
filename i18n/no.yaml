@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Hopp til innhold"
+nav_home:
+  other: "Hjem"
+nav_tools:
+  other: "Verktøy"
+nav_compare:
+  other: "Sammenlign"
+nav_guides:
+  other: "Veiledninger"
+nav_ranking:
+  other: "Rangering"
+nav_faq:
+  other: "Vanlige spørsmål"
+search_title:
+  other: "Søk"
+search_placeholder:
+  other: "Søk AI-verktøy, priser, veiledninger..."
+search_empty:
+  other: "Ingen resultater funnet"
+search_results:
+  other: "resultater funnet"
+search_clear:
+  other: "Tøm"
+search_load_more:
+  other: "Last inn flere resultater"
+search_label:
+  other: "Søk på nettstedet"
+search_submit:
+  other: "Søk"
+404_message:
+  other: "Ops! Siden du leter etter, ble ikke funnet."
+404_hint:
+  other: "Den kan ha blitt flyttet, slettet eller ha aldri eksistert."
+404_popular:
+  other: "Populære AI-verktøy"
+back_to_home:
+  other: "Tilbake til hjem"
+browse_all_tools:
+  other: "Bla gjennom alle verktøy"
+popular_categories:
+  other: "Populært"
+home_categories_title:
+  other: "Bla etter kategori"
+home_recent_changes:
+  other: "Siste prisendringer"
+home_popular_comparisons:
+  other: "Populære sammenligninger"
+home_guides_title:
+  other: "Sparerveiledninger"
+tools:
+  other: "verktøy"
+view_all_tools:
+  other: "Vis alle verktøy"
+view_all_comparisons:
+  other: "Vis alle sammenligninger"
+view_all_guides:
+  other: "Vis alle veiledninger"
+view_pricing:
+  other: "Vis priser"
+reading_time:
+  other: "min lesing"
+free_tier:
+  other: "Gratisversjon"
+free_to_use:
+  other: "Gratis å bruke"
+month:
+  other: "mnd"
+visit_official:
+  other: "Besøk offisiell nettside"
+tags:
+  other: "Tags"
+other_languages:
+  other: "Andre språk"
+previous:
+  other: "Forrige"
+next:
+  other: "Neste"
+footer_explore:
+  other: "Utforsk"
+footer_company:
+  other: "Selskap"
+footer_legal:
+  other: "Juridisk"
+footer_languages:
+  other: "Språk"
+footer_about:
+  other: "Om oss"
+footer_contact:
+  other: "Kontakt"
+footer_privacy:
+  other: "Personvernerklæring"
+footer_ftc:
+  other: "FTC-opplysning"
+footer_price_disclaimer:
+  other: "Prisansvar"
+footer_terms:
+  other: "Tjenestevilkår"
+footer_disclaimer_text:
+  other: "Viste priser og abonnementer er kun referanse og kan endres. Verifiser alltid på leverandørens offisielle nettside før kjøp. Vi kan tjene affiliate-provisjon fra noen lenker."
+footer_rights:
+  other: "Alle rettigheter forbeholdt."
+total_count:
+  other: "Totalt"
+prev_page:
+  other: "Forrige"
+next_page:
+  other: "Neste"
+no_results:
+  other: "Ingen innhold tilgjengelig ennå."
+switch_language:
+  other: "Bytt språk"

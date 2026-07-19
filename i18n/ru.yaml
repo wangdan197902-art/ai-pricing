@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "Перейти к содержанию"
+nav_home:
+  other: "Главная"
+nav_tools:
+  other: "Инструменты"
+nav_compare:
+  other: "Сравнить"
+nav_guides:
+  other: "Руководства"
+nav_ranking:
+  other: "Рейтинг"
+nav_faq:
+  other: "Частые вопросы"
+search_title:
+  other: "Поиск"
+search_placeholder:
+  other: "Поиск ИИ-инструментов, цен, руководств..."
+search_empty:
+  other: "Результаты не найдены"
+search_results:
+  other: "результатов найдено"
+search_clear:
+  other: "Очистить"
+search_load_more:
+  other: "Загрузить ещё результаты"
+search_label:
+  other: "Поиск по сайту"
+search_submit:
+  other: "Поиск"
+404_message:
+  other: "Ой! Страница, которую вы ищете, не найдена."
+404_hint:
+  other: "Возможно, она была перемещена, удалена или никогда не существовала."
+404_popular:
+  other: "Популярные ИИ-инструменты"
+back_to_home:
+  other: "Вернуться на главную"
+browse_all_tools:
+  other: "Просмотреть все инструменты"
+popular_categories:
+  other: "Популярное"
+home_categories_title:
+  other: "Просмотр по категориям"
+home_recent_changes:
+  other: "Последние изменения цен"
+home_popular_comparisons:
+  other: "Популярные сравнения"
+home_guides_title:
+  other: "Руководства по экономии"
+tools:
+  other: "инструментов"
+view_all_tools:
+  other: "Все инструменты"
+view_all_comparisons:
+  other: "Все сравнения"
+view_all_guides:
+  other: "Все руководства"
+view_pricing:
+  other: "Посмотреть цены"
+reading_time:
+  other: "мин чтения"
+free_tier:
+  other: "Бесплатный тариф"
+free_to_use:
+  other: "Бесплатно"
+month:
+  other: "мес"
+visit_official:
+  other: "Перейти на официальный сайт"
+tags:
+  other: "Теги"
+other_languages:
+  other: "Другие языки"
+previous:
+  other: "Предыдущая"
+next:
+  other: "Следующая"
+footer_explore:
+  other: "Исследовать"
+footer_company:
+  other: "Компания"
+footer_legal:
+  other: "Правовая информация"
+footer_languages:
+  other: "Языки"
+footer_about:
+  other: "О нас"
+footer_contact:
+  other: "Контакты"
+footer_privacy:
+  other: "Политика конфиденциальности"
+footer_ftc:
+  other: "Раскрытие FTC"
+footer_price_disclaimer:
+  other: "Уведомление о ценах"
+footer_terms:
+  other: "Условия использования"
+footer_disclaimer_text:
+  other: "Указанные цены и тарифные планы представлены только для справки и могут изменяться. Перед покупкой всегда проверяйте информацию на официальном сайте провайдера. Мы можем получать партнёрские комиссионные за некоторые ссылки."
+footer_rights:
+  other: "Все права защищены."
+total_count:
+  other: "Всего"
+prev_page:
+  other: "Предыдущая"
+next_page:
+  other: "Следующая"
+no_results:
+  other: "Контент пока недоступен."
+switch_language:
+  other: "Сменить язык"

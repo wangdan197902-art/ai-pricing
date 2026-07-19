@@ -1,0 +1,168 @@
+{{/* JSON-LD 结构化数据：根据 .Type 输出 WebSite / BreadcrumbList / Product / FAQPage / Article */}}
+
+{{/* 1. WebSite schema：首页输出 SearchAction */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.description | htmlEscape }}",
+  "inLanguage": "{{ .Site.Language.LanguageCode }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{ end }}
+
+{{/* 2. BreadcrumbList schema：所有非首页输出 */}}
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ .Site.Title }}",
+      "item": "{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/"
+    }{{ if .Section }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Section | humanize | title }}",
+      "item": "{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/{{ .Section }}/"
+    }{{ end }}{{ if and (not .IsNode) .Title }},
+    {
+      "@type": "ListItem",
+      "position": {{ if .Section }}3{{ else }}2{{ end }},
+      "name": "{{ .Title | htmlEscape }}",
+      "item": "{{ .Permalink }}"
+    }{{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{/* 3. Product schema：工具详情页（.Type == "tools"）输出，含 OfferPrice */}}
+{{ if and (eq .Type "tools") (not .IsNode) }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ .Title | htmlEscape }}",
+  "description": "{{ .Description | default .Summary | htmlEscape }}",
+  "url": "{{ .Permalink }}",
+  "inLanguage": "{{ .Site.Language.LanguageCode }}",
+  "category": "{{ .Params.category | default "AI Tool" }}"{{ with .Params.brand }},
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ . | htmlEscape }}"
+  }{{ end }}{{ with .Params.logo }},
+  "logo": "{{ . | absURL }}"{{ end }}{{ with .Params.image }},
+  "image": "{{ . | absURL }}"{{ end }}{{ with .Params.rating }},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ .value | default 4.5 }}",
+    "ratingCount": "{{ .count | default 100 }}"
+  }{{ end }},
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "{{ .Params.currency | default "USD" }}",
+    "price": "{{ .Params.price_min | default .Params.price | default "0.00" }}",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ .Params.official_url | default .Permalink }}"
+    {{ with .Params.price_max }},
+    "maxPrice": "{{ . }}"
+    {{ end }}
+    {{ with .Params.free_tier }},
+    "description": "Free tier available: {{ . }}"
+    {{ end }}
+  }
+}
+</script>
+{{ end }}
+
+{{/* 4. FAQPage schema：攻略详情页或带 faq 参数的工具页 */}}
+{{ if and (or (eq .Type "guides") (eq .Type "faq") .Params.faq) (not .IsNode) }}
+{{ with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "{{ $.Site.Language.LanguageCode }}",
+  "mainEntity": [
+    {{ range $i, $qa := . }}
+    {{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ .question | htmlEscape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ .answer | htmlEscape }}"
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+{{ end }}
+
+{{/* 5. Article schema：攻略详情页（.Type == "guides"） */}}
+{{ if and (eq .Type "guides") (not .IsNode) }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title | htmlEscape }}",
+  "description": "{{ .Description | default .Summary | htmlEscape }}",
+  "url": "{{ .Permalink }}",
+  "inLanguage": "{{ .Site.Language.LanguageCode }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.author | default "AI Pricing Hub" }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+  {{ with .Params.image }},
+  "image": "{{ . | absURL }}"
+  {{ end }}
+}
+</script>
+{{ end }}
+
+{{/* 6. CollectionPage schema：分类/标签/列表页 */}}
+{{ if and .IsNode (not .IsHome) (eq .Type "categories") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ .Title | htmlEscape }}",
+  "url": "{{ .Permalink }}",
+  "inLanguage": "{{ .Site.Language.LanguageCode }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+{{ end }}

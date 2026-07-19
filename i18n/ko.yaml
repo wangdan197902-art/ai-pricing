@@ -1,0 +1,112 @@
+skip_to_content:
+  other: "콘텐츠로 건너뛰기"
+nav_home:
+  other: "홈"
+nav_tools:
+  other: "도구"
+nav_compare:
+  other: "비교"
+nav_guides:
+  other: "가이드"
+nav_ranking:
+  other: "순위"
+nav_faq:
+  other: "자주묻는질문"
+search_title:
+  other: "검색"
+search_placeholder:
+  other: "AI 도구, 가격, 가이드 검색..."
+search_empty:
+  other: "검색 결과가 없습니다"
+search_results:
+  other: "개 결과"
+search_clear:
+  other: "지우기"
+search_load_more:
+  other: "더 많은 결과 불러오기"
+search_label:
+  other: "사이트 검색"
+search_submit:
+  other: "검색"
+404_message:
+  other: "앗! 찾으시는 페이지를 찾을 수 없습니다."
+404_hint:
+  other: "페이지가 이동, 삭제되었거나 존재하지 않았을 수 있습니다."
+404_popular:
+  other: "인기 AI 도구"
+back_to_home:
+  other: "홈으로 돌아가기"
+browse_all_tools:
+  other: "모든 도구 둘러보기"
+popular_categories:
+  other: "인기"
+home_categories_title:
+  other: "카테고리별 둘러보기"
+home_recent_changes:
+  other: "최신 가격 변동"
+home_popular_comparisons:
+  other: "인기 비교"
+home_guides_title:
+  other: "절약 가이드"
+tools:
+  other: "도구"
+view_all_tools:
+  other: "모든 도구 보기"
+view_all_comparisons:
+  other: "모든 비교 보기"
+view_all_guides:
+  other: "모든 가이드 보기"
+view_pricing:
+  other: "가격 보기"
+reading_time:
+  other: "분 분량"
+free_tier:
+  other: "무료 플랜"
+free_to_use:
+  other: "무료로 사용 가능"
+month:
+  other: "월"
+visit_official:
+  other: "공식 사이트 방문"
+tags:
+  other: "태그"
+other_languages:
+  other: "다른 언어"
+previous:
+  other: "이전"
+next:
+  other: "다음"
+footer_explore:
+  other: "탐색"
+footer_company:
+  other: "회사"
+footer_legal:
+  other: "법적"
+footer_languages:
+  other: "언어"
+footer_about:
+  other: "소개"
+footer_contact:
+  other: "연락처"
+footer_privacy:
+  other: "개인정보처리방침"
+footer_ftc:
+  other: "FTC 공시"
+footer_price_disclaimer:
+  other: "가격 고지사항"
+footer_terms:
+  other: "이용약관"
+footer_disclaimer_text:
+  other: "표시된 가격 및 플랜은 참고용이며 변경될 수 있습니다. 구매 전 공식 제공자 웹사이트에서 반드시 확인하십시오. 일부 링크에서 제휴 수수료를 받을 수 있습니다."
+footer_rights:
+  other: "모든 권리 보유."
+total_count:
+  other: "총"
+prev_page:
+  other: "이전"
+next_page:
+  other: "다음"
+no_results:
+  other: "아직 콘텐츠가 없습니다."
+switch_language:
+  other: "언어 전환"
