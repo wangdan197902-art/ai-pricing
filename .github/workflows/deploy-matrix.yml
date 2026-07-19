@@ -133,7 +133,37 @@ jobs:
           done
           
           if [ -z "$REAL_HOME" ]; then
-            echo "⚠️ 未找到真正首页内容，跳过修复"
+            echo "⚠️ 未找到真正首页内容（扩展语种），生成静态占位首页"
+            # 对于5个扩展语种（cs/el/fi/hu/ro），i18n.py 不支持，只有占位 _index.md
+            # 生成一个静态 HTML 占位首页，覆盖根目录重定向页
+            cat > index.html << 'PLACEHOLDER_EOF'
+<!doctype html>
+<html lang="LANG_CODE"><head><meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>AI Tools Pricing - LANG_NAME</title>
+<meta name=description content="AI Tools Pricing Comparison - LANG_NAME">
+<meta name=robots content="index,follow">
+<link rel=canonical href="https://LANG.pricing.ai-term-hub.com/">
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a1a;color:#e5e7eb;margin:0;padding:40px 20px;text-align:center}
+h1{color:#60a5fa;font-size:2.5rem;margin-bottom:1rem}
+p{font-size:1.1rem;line-height:1.6;max-width:600px;margin:0 auto 1rem}
+.badge{display:inline-block;background:#1e293b;color:#60a5fa;padding:4px 12px;border-radius:4px;font-size:0.9rem;margin-top:1rem}
+</style></head>
+<body>
+<h1>AI Tools Pricing</h1>
+<p>LANG_NAME - AI 工具价格对比站点</p>
+<p>This site is under construction. Full content will be available soon.</p>
+<p class="badge">Powered by GitHub Pages + Hugo</p>
+</body></html>
+PLACEHOLDER_EOF
+            # 替换占位符
+            sed -i "s|LANG_CODE|${{ matrix.lang }}-${{ matrix.lang }}|g" index.html 2>/dev/null || true
+            # 更简单的替换：用 lang 直接作为 lang 属性
+            sed -i "s|lang=\"LANG_CODE\"|lang=\"${{ matrix.lang }}\"|g" index.html 2>/dev/null || true
+            sed -i "s|LANG_NAME|${{ matrix.lang }}|g" index.html 2>/dev/null || true
+            sed -i "s|LANG.pricing|${{ matrix.lang }}.pricing|g" index.html 2>/dev/null || true
+            echo "✅ 生成静态占位首页: $(wc -c < index.html) 字节"
           else
             echo "✅ 找到真正首页内容: $REAL_HOME ($(wc -c < $REAL_HOME) 字节)"
             
