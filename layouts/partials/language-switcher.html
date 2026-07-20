@@ -1,6 +1,6 @@
 {{/* 语言切换器：静态生成 URL（避免 .Translations 性能瓶颈） */}}
-{{ $supportedLangs := slice "en" "zh" "es" "fr" "de" "ja" "ko" "pt" "ru" "it" "ar" "nl" "pl" "tr" "vi" "th" "id" "sv" "no" "da" }}
-{{ $langNames := dict "en" "English" "zh" "中文" "es" "Español" "fr" "Français" "de" "Deutsch" "ja" "日本語" "ko" "한국어" "pt" "Português" "ru" "Русский" "it" "Italiano" "ar" "العربية" "nl" "Nederlands" "pl" "Polski" "tr" "Türkçe" "vi" "Tiếng Việt" "th" "ไทย" "id" "Indonesia" "sv" "Svenska" "no" "Norsk" "da" "Dansk" }}
+{{ $supportedLangs := slice "en" "zh" "es" "fr" "de" "ja" "ko" "pt" "ru" "it" "ar" "nl" "pl" "tr" "vi" "id" "sv" "no" "da" }}
+{{ $langNames := dict "en" "English" "zh" "中文" "es" "Español" "fr" "Français" "de" "Deutsch" "ja" "日本語" "ko" "한국어" "pt" "Português" "ru" "Русский" "it" "Italiano" "ar" "العربية" "nl" "Nederlands" "pl" "Polski" "tr" "Türkçe" "vi" "Tiếng Việt" "id" "Indonesia" "sv" "Svenska" "no" "Norsk" "da" "Dansk" }}
 {{ $currentPath := .RelPermalink }}
 {{ $pathWithoutLang := replaceRE "^/[a-z]{2}/" "/" $currentPath }}
 {{ if eq $pathWithoutLang $currentPath }}

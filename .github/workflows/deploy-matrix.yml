@@ -34,7 +34,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lang: [ar, cs, da, de, el, en, es, fi, fr, hu, id, it, ja, ko, nl, no, pl, pt, ro, ru, sv, th, tr, vi, zh]
+        lang: [ar, cs, da, de, el, en, es, fi, fr, hu, id, it, ja, ko, nl, no, pl, pt, ro, ru, sv, tr, vi, zh]
 
     steps:
       - name: Checkout source
@@ -96,7 +96,7 @@ jobs:
 
       - name: Add CNAME and .nojekyll
         run: |
-          echo "${{ matrix.lang }}.${{ env.SITE_TYPE }}.${{ env.DOMAIN }}" > publish-${{ matrix.lang }}/CNAME
+          echo "${{ env.SITE_TYPE }}-${{ matrix.lang }}.${{ env.DOMAIN }}" > publish-${{ matrix.lang }}/CNAME
           touch publish-${{ matrix.lang }}/.nojekyll
           # IndexNow API Key 文件（用于 Bing/Yandex 即时索引推送）
           echo "a0f6b5032dd63cf84271ae3ab4fcaf86" > publish-${{ matrix.lang }}/a0f6b5032dd63cf84271ae3ab4fcaf86.txt
@@ -129,7 +129,7 @@ jobs:
               "<title>AI Tools Pricing - ${{ matrix.lang }}</title>" \
               "<meta name=description content=\"AI Tools Pricing Comparison - ${{ matrix.lang }}\">" \
               '<meta name=robots content="index,follow">' \
-              "<link rel=canonical href=\"https://${{ matrix.lang }}.pricing.ai-term-hub.com/\">" \
+              "<link rel=canonical href=\"https://${{ env.SITE_TYPE }}-${{ matrix.lang }}.ai-term-hub.com/\">" \
               '<style>' \
               'body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a1a;color:#e5e7eb;margin:0;padding:40px 20px;text-align:center}' \
               'h1{color:#60a5fa;font-size:2.5rem;margin-bottom:1rem}' \
@@ -162,7 +162,7 @@ jobs:
           # 修复 sitemap.xml：去掉 /{lang}/ 前缀（Hugo 错误地添加了）
           if [ -f sitemap.xml ]; then
             SITEMAP_SIZE_BEFORE=$(wc -c < sitemap.xml)
-            sed -i "s|<loc>https://${{ matrix.lang }}\.${{ env.SITE_TYPE }}\.${{ env.DOMAIN }}/${{ matrix.lang }}/|<loc>https://${{ matrix.lang }}.${{ env.SITE_TYPE }}.${{ env.DOMAIN }}/|g" sitemap.xml
+            sed -i "s|<loc>https://${{ env.SITE_TYPE }}-${{ matrix.lang }}\.${{ env.DOMAIN }}/${{ matrix.lang }}/|<loc>https://${{ env.SITE_TYPE }}-${{ matrix.lang }}.${{ env.DOMAIN }}/|g" sitemap.xml
             SITEMAP_SIZE_AFTER=$(wc -c < sitemap.xml)
             REMOVED=$(awk "BEGIN{print $SITEMAP_SIZE_BEFORE - $SITEMAP_SIZE_AFTER}")
             echo "✅ 修复 sitemap.xml：去除了 ${{ matrix.lang }}/ 前缀（减少 $REMOVED 字节）"
@@ -210,5 +210,5 @@ jobs:
 
       - name: Notify deployment
         run: |
-          echo "✅ Deployed: https://${{ matrix.lang }}.${{ env.SITE_TYPE }}.${{ env.DOMAIN }}"
+          echo "✅ Deployed: https://${{ env.SITE_TYPE }}-${{ matrix.lang }}.${{ env.DOMAIN }}"
           echo "📦 Repository: https://github.com/${{ env.GITHUB_USER }}/${{ env.SITE_TYPE }}-${{ matrix.lang }}"

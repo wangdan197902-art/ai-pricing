@@ -2,13 +2,13 @@
 #
 # 使用方式：
 #   1. 由 scripts/创建hugo配置.py 自动填充占位符并生成 hugo-{lang}.toml
-#   2. 占位符：fi / Suomi / pricing / ai-term-hub.com / https://fi.pricing.ai-term-hub.com/
+#   2. 占位符：fi / Suomi / pricing / ai-term-hub.com / https://pricing-fi.ai-term-hub.com/
 #   3. 与主 hugo.toml 一起使用：hugo --config hugo.toml,hugo-{lang}.toml
 #
 # 此配置会覆盖 hugo.toml 中的对应字段，实现单语种独立构建
 
 # ===== 基础URL（绑定自购三级域名） =====
-baseURL = "https://fi.pricing.ai-term-hub.com/"
+baseURL = "https://pricing-fi.ai-term-hub.com/"
 
 # ===== 语言设置 =====
 languageCode = "fi"
@@ -31,14 +31,14 @@ defaultContentLanguage = "fi"
   description = "AI Terms Dictionary in Suomi - Comprehensive AI terminology reference"
 
   # 自定义域名
-  customDomain = "fi.pricing.ai-term-hub.com"
+  customDomain = "pricing-fi.ai-term-hub.com"
 
   # 部署平台信息
   deploymentPlatform = "github-pages"
   repositoryName = "pricing-fi"
 
   # canonical（指向当前语种子站首页）
-  canonical = "https://fi.pricing.ai-term-hub.com/"
+  canonical = "https://pricing-fi.ai-term-hub.com/"
 
   # SEO 验证与追踪参数（由 scripts/添加验证标签.py 同步注入 layouts/seo.html）
   # 这些值会被 Hugo 模板读取并输出对应 meta 标签
@@ -53,31 +53,30 @@ defaultContentLanguage = "fi"
   # Hreflang alternates（指向其他语种子站）
   # 用于SEO多语种信号传递
   [params.alternates]
-    ar = "https://ar.pricing.ai-term-hub.com/"
-    cs = "https://cs.pricing.ai-term-hub.com/"
-    da = "https://da.pricing.ai-term-hub.com/"
-    de = "https://de.pricing.ai-term-hub.com/"
-    el = "https://el.pricing.ai-term-hub.com/"
-    en = "https://en.pricing.ai-term-hub.com/"
-    es = "https://es.pricing.ai-term-hub.com/"
-    fi = "https://fi.pricing.ai-term-hub.com/"
-    fr = "https://fr.pricing.ai-term-hub.com/"
-    hu = "https://hu.pricing.ai-term-hub.com/"
-    id = "https://id.pricing.ai-term-hub.com/"
-    it = "https://it.pricing.ai-term-hub.com/"
-    ja = "https://ja.pricing.ai-term-hub.com/"
-    ko = "https://ko.pricing.ai-term-hub.com/"
-    nl = "https://nl.pricing.ai-term-hub.com/"
-    no = "https://no.pricing.ai-term-hub.com/"
-    pl = "https://pl.pricing.ai-term-hub.com/"
-    pt = "https://pt.pricing.ai-term-hub.com/"
-    ro = "https://ro.pricing.ai-term-hub.com/"
-    ru = "https://ru.pricing.ai-term-hub.com/"
-    sv = "https://sv.pricing.ai-term-hub.com/"
-    th = "https://th.pricing.ai-term-hub.com/"
-    tr = "https://tr.pricing.ai-term-hub.com/"
-    vi = "https://vi.pricing.ai-term-hub.com/"
-    zh = "https://zh.pricing.ai-term-hub.com/"
+    ar = "https://pricing-ar.ai-term-hub.com/"
+    cs = "https://pricing-cs.ai-term-hub.com/"
+    da = "https://pricing-da.ai-term-hub.com/"
+    de = "https://pricing-de.ai-term-hub.com/"
+    el = "https://pricing-el.ai-term-hub.com/"
+    en = "https://pricing-en.ai-term-hub.com/"
+    es = "https://pricing-es.ai-term-hub.com/"
+    fi = "https://pricing-fi.ai-term-hub.com/"
+    fr = "https://pricing-fr.ai-term-hub.com/"
+    hu = "https://pricing-hu.ai-term-hub.com/"
+    id = "https://pricing-id.ai-term-hub.com/"
+    it = "https://pricing-it.ai-term-hub.com/"
+    ja = "https://pricing-ja.ai-term-hub.com/"
+    ko = "https://pricing-ko.ai-term-hub.com/"
+    nl = "https://pricing-nl.ai-term-hub.com/"
+    no = "https://pricing-no.ai-term-hub.com/"
+    pl = "https://pricing-pl.ai-term-hub.com/"
+    pt = "https://pricing-pt.ai-term-hub.com/"
+    ro = "https://pricing-ro.ai-term-hub.com/"
+    ru = "https://pricing-ru.ai-term-hub.com/"
+    sv = "https://pricing-sv.ai-term-hub.com/"
+    tr = "https://pricing-tr.ai-term-hub.com/"
+    vi = "https://pricing-vi.ai-term-hub.com/"
+    zh = "https://pricing-zh.ai-term-hub.com/"
 
 # ===== Sitemap 配置（单语种独立sitemap） =====
 [sitemap]

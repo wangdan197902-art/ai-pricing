@@ -121,11 +121,6 @@ logLevel = "error"
     languageCode = "vi-vn"
     weight = 15
     title = "Giá Công cụ AI"
-  [languages.th]
-    languageName = "ไทย"
-    languageCode = "th-th"
-    weight = 16
-    title = "ราคาเครื่องมือ AI"
   [languages.id]
     languageName = "Indonesia"
     languageCode = "id-id"
