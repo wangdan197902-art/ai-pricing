@@ -146,7 +146,10 @@ def inject_website_jsonld(html: str, lang: str) -> str:
 def fix_title(html: str, lang: str) -> str:
     """修复 <title> 标签，确保显示正确的站点标题。
 
-    如果 title 中包含 "AI Terms Dictionary"，替换为正确的 pricing 标题。
+    处理两种异常情况：
+    1. title 中包含 "AI Terms Dictionary"（从 terms 项目复制的旧模板遗留）
+    2. title 格式为 "短词 | 站点名"，其中短词是 Hugo 0.140.0 多语种 bug 导致的
+       错误页面标题（如 "Ens"、"Des" 等），应替换为纯站点名
     """
     site_title = get_site_title(lang)
     # 匹配 <title>...</title>
@@ -156,36 +159,47 @@ def fix_title(html: str, lang: str) -> str:
         return html
 
     current_title = match.group(1).strip()
+
+    # 情况1：title 包含 "AI Terms Dictionary"（旧模板遗留）
     if "AI Terms Dictionary" in current_title:
-        # 替换为正确的 title（保留 | 后缀格式）
-        new_title = f"{site_title} | {site_title}"
-        # 如果原标题有 | 分隔符，保留格式
-        if "|" in current_title:
-            parts = current_title.split("|", 1)
-            # 保留第二部分（站点名），但替换为正确的站点名
-            new_title = f"{parts[0].strip()} | {site_title}"
+        new_title = site_title
         return html.replace(match.group(0), f"<title>{new_title}</title>", 1)
+
+    # 情况2：title 格式为 "前缀 | 站点名"，前缀是错误的页面标题
+    # 这种情况通常是 Hugo 0.140.0 多语种 bug 导致 .Title 返回了错误的短词
+    if "|" in current_title:
+        parts = current_title.split("|", 1)
+        prefix = parts[0].strip()
+        suffix = parts[1].strip()
+        # 如果后缀是正确的站点名，且前缀不是站点名本身，则用纯站点名
+        if suffix == site_title and prefix != site_title:
+            new_title = site_title
+            return html.replace(match.group(0), f"<title>{new_title}</title>", 1)
+
     return html
 
 
 def optimize_homepage_size(html: str, max_tool_cards: int = 20) -> str:
     """优化首页大小，限制工具卡片数量。
 
-    策略：保留前 max_tool_cards 个 .tool-card，移除其余的。
+    策略：保留前 max_tool_cards 个 <article> 标签，移除其余的。
     这能显著减少首页大小（从 2.6MB 降到 ~200KB）。
+
+    注意：首页可能有多种类名的 article 标签：
+    - <article class="tool-card"> （带引号）
+    - <article class=tool-card> （无引号，Hugo 压缩输出）
+    - <article class="card generic-card"> （通用卡片）
+    需要匹配所有 article 标签。
     """
-    # 匹配 <article class="tool-card" ...>...</article>
-    card_pattern = r'<article class="tool-card"[^>]*>.*?</article>'
+    # 匹配所有 <article ...>...</article>（不限定 class）
+    card_pattern = r'<article\b[^>]*>.*?</article>'
     cards = re.findall(card_pattern, html, re.DOTALL)
     if len(cards) <= max_tool_cards:
         return html
 
     # 保留前 max_tool_cards 个，移除其余的
     removed_count = len(cards) - max_tool_cards
-    kept_cards = cards[:max_tool_cards]
 
-    # 用保留的卡片替换所有卡片
-    # 由于 re.sub 会替换所有匹配，我们需要一个更精细的方法
     # 找到所有卡片的起始和结束位置
     matches = list(re.finditer(card_pattern, html, re.DOTALL))
     if not matches:
