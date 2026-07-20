@@ -1542,6 +1542,92 @@ def gen_404_page_html() -> str:
     )
 
 
+def gen_search_page_html(lang: str) -> str:
+    """搜索结果页 /{lang}/search/index.html。
+
+    使用 Pagefind UI 提供站内搜索，按当前语言过滤结果。
+    页面本身不参与 Pagefind 索引（data-pagefind-ignore）。
+    """
+    site_t = site_title(lang)
+    title = tr("search_title", lang)
+    desc = tr("search_label", lang)
+    canonical = f"/{lang}/search/"
+
+    placeholder = tr("search_placeholder", lang)
+    empty_text = tr("search_empty", lang)
+    results_text = tr("search_results", lang)
+    clear_text = tr("search_clear", lang)
+    load_more_text = tr("search_load_more", lang)
+
+    breadcrumb_items = [
+        (site_t, f"/{lang}/"),
+        (title, canonical),
+    ]
+
+    main_content = f'''<section class="search-page" data-pagefind-ignore>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/{lang}/">{escape(tr("nav_home", lang))}</a></li>
+            <li aria-current="page">{escape(title)}</li>
+        </ol>
+    </nav>
+
+    <header class="search-header">
+        <h1>{escape(title)}</h1>
+        <p class="search-description">{escape(desc)}</p>
+    </header>
+
+    <div id="search" data-pagefind-ui></div>
+
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+
+    <div class="search-langs" data-pagefind-ignore>
+        {render_language_switcher(lang, canonical)}
+    </div>
+</section>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {{
+    if (typeof PagefindUI === 'undefined') {{
+      console.error('PagefindUI not loaded');
+      return;
+    }}
+    const lang = document.documentElement.lang.split('-')[0];
+    const search = new PagefindUI({{
+      element: "#search",
+      showSubResults: true,
+      showImages: false,
+      pageSize: 10,
+      filters: {{ lang: lang }},
+      translations: {{
+        placeholder: {escape(json.dumps(placeholder))},
+        empty: {escape(json.dumps(empty_text))},
+        results: {escape(json.dumps(results_text))},
+        clear_search: {escape(json.dumps(clear_text))},
+        load_more: {escape(json.dumps(load_more_text))}
+      }}
+    }});
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const q = urlParams.get('q');
+    if (q) {{
+      const input = document.querySelector('#search input[type="search"], #search .pagefind-ui__search-input');
+      if (input) {{
+        input.value = q;
+        input.dispatchEvent(new Event('input', {{ bubbles: true }}));
+      }}
+    }}
+  }});
+</script>'''
+
+    return render_base(
+        lang, f"{title} - {site_t}", desc, canonical,
+        main_content, page_type="",
+        breadcrumb_items=breadcrumb_items, is_node=True,
+        current_section="",
+    )
+
+
 # ----------------------------------------------------------------------
 # robots.txt & sitemap 生成
 # ----------------------------------------------------------------------
@@ -1621,8 +1707,14 @@ def gen_sitemaps(tools: list, compare_pairs: list, langs: list) -> tuple[int, in
             lines.append(f"    <priority>{prio}</priority>")
             lines.append("  </url>")
         lines.append("</urlset>")
-        sitemap_path = PUBLIC_DIR / f"sitemap-{lang}.xml"
-        sitemap_path.write_text("\n".join(lines), encoding="utf-8")
+        sitemap_content = "\n".join(lines)
+        # 1) 兼容旧路径: public/sitemap-{lang}.xml
+        (PUBLIC_DIR / f"sitemap-{lang}.xml").write_text(sitemap_content, encoding="utf-8")
+        # 2) 兼容 Hugo 默认路径: public/{lang}/sitemap.xml
+        # 部分搜索引擎/工具会请求 /{lang}/sitemap.xml，需保证此路径可访问
+        lang_sitemap_dir = PUBLIC_DIR / lang
+        lang_sitemap_dir.mkdir(parents=True, exist_ok=True)
+        (lang_sitemap_dir / "sitemap.xml").write_text(sitemap_content, encoding="utf-8")
         sub_count += 1
         total_urls += len(urls)
 
@@ -1635,7 +1727,11 @@ def gen_sitemaps(tools: list, compare_pairs: list, langs: list) -> tuple[int, in
         index_lines.append(f"    <lastmod>{DEFAULT_DATE}</lastmod>")
         index_lines.append("  </sitemap>")
     index_lines.append("</sitemapindex>")
-    (PUBLIC_DIR / "sitemap-index.xml").write_text("\n".join(index_lines), encoding="utf-8")
+    index_content = "\n".join(index_lines)
+    (PUBLIC_DIR / "sitemap-index.xml").write_text(index_content, encoding="utf-8")
+    # 兼容标准路径: public/sitemap.xml（sitemapindex 格式，等同 sitemap-index.xml）
+    # 部分搜索引擎/工具默认请求 /sitemap.xml，需保证此路径可访问
+    (PUBLIC_DIR / "sitemap.xml").write_text(index_content, encoding="utf-8")
 
     return sub_count, total_urls
 
@@ -1920,6 +2016,21 @@ def main() -> int:
     print("\n=== 生成 404 页面 ===")
     write_html(PUBLIC_DIR / "404.html", gen_404_page_html())
     print(f"  已写入: public/404.html")
+
+    # 生成 search 页面（每个语种 + 顶级英文版兜底）
+    print("\n=== 生成 search 页面 ===")
+    search_count = 0
+    for lang in langs:
+        search_html = gen_search_page_html(lang)
+        write_html(PUBLIC_DIR / lang / "search" / "index.html", search_html)
+        search_count += 1
+    # 顶级 /search/index.html：使用英文版作为默认入口（与根目录 index.html 同策略）
+    if "en" in langs:
+        en_search_html = gen_search_page_html("en")
+        write_html(PUBLIC_DIR / "search" / "index.html", en_search_html)
+        search_count += 1
+        print(f"  顶级 /search/index.html: 使用英文版兜底")
+    print(f"  已写入 {search_count} 个 search 页面")
 
     # 生成 robots.txt
     print("\n=== 生成 robots.txt ===")
