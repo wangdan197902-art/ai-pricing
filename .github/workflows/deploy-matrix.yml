@@ -170,6 +170,18 @@ jobs:
           
           echo "=== 修复后根目录 index.html 大小: $(wc -c < index.html) 字节 ==="
 
+      - name: Inject WebSite JSON-LD and optimize homepage
+        run: |
+          # 注入 WebSite JSON-LD 并优化首页大小
+          # 解决 3 个问题：
+          # 1. WebSite 类型 JSON-LD 缺失（因 /page/2/index.html 覆盖 /index.html，.IsHome=false）
+          # 2. 首页过大（2.6MB+，限制工具卡片数到 20）
+          # 3. 兜底修复 title 中的 "AI Terms Dictionary"（若 hugo-{lang}.toml 修复未生效）
+          cd publish-${{ matrix.lang }}
+          python3 ../scripts/inject_seo.py . --lang ${{ matrix.lang }} --max-tool-cards 20
+          echo "=== 首页大小: $(wc -c < index.html) 字节 ==="
+          echo "=== WebSite JSON-LD 检查: $(grep -c '"@type": "WebSite"' index.html) 个 ==="
+
       - name: Build Pagefind index
         continue-on-error: true
         run: |

@@ -20,7 +20,7 @@ defaultContentLanguage = "it"
 [languages]
   [languages.it]
     weight = 1
-    title = "AI Terms Dictionary - Italiano"
+    title = "Prezzi Strumenti IA"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "it"
   currentLanguage = "it"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in Italiano - Comprehensive AI terminology reference"
+  description = "Confronta prezzi e funzionalità degli strumenti IA e trova le migliori offerte. Oltre 1000 strumenti IA in 20 lingue."
 
   # 自定义域名
   customDomain = "pricing-it.ai-term-hub.com"

@@ -20,7 +20,7 @@ defaultContentLanguage = "vi"
 [languages]
   [languages.vi]
     weight = 1
-    title = "AI Terms Dictionary - Tiếng Việt"
+    title = "Giá Công cụ AI"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "vi"
   currentLanguage = "vi"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in Tiếng Việt - Comprehensive AI terminology reference"
+  description = "So sánh giá và tính năng của công cụ AI và tìm ưu đãi tốt nhất. Hơn 1000 công cụ AI trong 20 ngôn ngữ."
 
   # 自定义域名
   customDomain = "pricing-vi.ai-term-hub.com"

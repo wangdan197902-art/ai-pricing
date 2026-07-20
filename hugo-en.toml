@@ -20,7 +20,7 @@ defaultContentLanguage = "en"
 [languages]
   [languages.en]
     weight = 1
-    title = "AI Terms Dictionary - English"
+    title = "AI Tools Pricing"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "en"
   currentLanguage = "en"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in English - Comprehensive AI terminology reference"
+  description = "Compare AI tools pricing, features and find the best deals. 1000+ AI tools across 20 languages."
 
   # 自定义域名
   customDomain = "pricing-en.ai-term-hub.com"

@@ -20,7 +20,7 @@ defaultContentLanguage = "el"
 [languages]
   [languages.el]
     weight = 1
-    title = "AI Terms Dictionary - Ελληνικά"
+    title = "Τιμές Εργαλείων AI"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "el"
   currentLanguage = "el"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in Ελληνικά - Comprehensive AI terminology reference"
+  description = "Συγκρίνετε τιμές και χαρακτηριστικά εργαλείων AI και βρείτε τις καλύτερες προσφορές. Πάνω από 1000 εργαλεία AI σε 20 γλώσσες."
 
   # 自定义域名
   customDomain = "pricing-el.ai-term-hub.com"

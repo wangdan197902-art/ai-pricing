@@ -20,7 +20,7 @@ defaultContentLanguage = "hu"
 [languages]
   [languages.hu]
     weight = 1
-    title = "AI Terms Dictionary - Magyar"
+    title = "AI Eszközök Árai"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "hu"
   currentLanguage = "hu"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in Magyar - Comprehensive AI terminology reference"
+  description = "Hasonlítsa össze az AI eszközök árait és funkcióit, és találja meg a legjobb ajánlatokat. Több mint 1000 AI eszköz 20 nyelven."
 
   # 自定义域名
   customDomain = "pricing-hu.ai-term-hub.com"

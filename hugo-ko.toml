@@ -20,7 +20,7 @@ defaultContentLanguage = "ko"
 [languages]
   [languages.ko]
     weight = 1
-    title = "AI Terms Dictionary - 한국어"
+    title = "AI도구 가격비교"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "ko"
   currentLanguage = "ko"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in 한국어 - Comprehensive AI terminology reference"
+  description = "AI 도구의 가격과 기능을 비교하고 최고의 거래를 찾으세요. 20개 언어로 1000개 이상의 AI 도구."
 
   # 自定义域名
   customDomain = "pricing-ko.ai-term-hub.com"

@@ -20,7 +20,7 @@ defaultContentLanguage = "de"
 [languages]
   [languages.de]
     weight = 1
-    title = "AI Terms Dictionary - Deutsch"
+    title = "KI-Tools Preise"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "de"
   currentLanguage = "de"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in Deutsch - Comprehensive AI terminology reference"
+  description = "Vergleichen Sie Preise und Funktionen von KI-Tools und finden Sie die besten Angebote. Über 1000 KI-Tools in 20 Sprachen."
 
   # 自定义域名
   customDomain = "pricing-de.ai-term-hub.com"

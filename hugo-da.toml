@@ -20,7 +20,7 @@ defaultContentLanguage = "da"
 [languages]
   [languages.da]
     weight = 1
-    title = "AI Terms Dictionary - Dansk"
+    title = "AI-værktøjer Priser"
 
 # ===== SEO优化参数 =====
 [params]
@@ -28,7 +28,7 @@ defaultContentLanguage = "da"
   currentLanguage = "da"
 
   # 站点描述（按语种翻译）
-  description = "AI Terms Dictionary in Dansk - Comprehensive AI terminology reference"
+  description = "Sammenlign priser og funktioner for AI-værktøjer og find de bedste tilbud. Over 1000 AI-værktøjer på 20 sprog."
 
   # 自定义域名
   customDomain = "pricing-da.ai-term-hub.com"
