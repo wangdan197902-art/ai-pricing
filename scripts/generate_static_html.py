@@ -236,6 +236,7 @@ def render_seo(lang: str, title: str, description: str, canonical_path: str,
         f'<link rel="canonical" href="{canonical}">',
         f'<meta name="robots" content="{robots}">',
         '<meta name="google-site-verification" content="Po21SS8ccODMgK6x0_LBsBX0t5qz7bdqRzASwE-ngyo">',
+        '<meta name="ahrefs-site-verification" content="ad7fa89d439de59a24f2c0539f078231d409b57876cd4088b2e41eafe03df321">',
         '<meta name="theme-color" content="#0a0a1a">',
         '<meta name="color-scheme" content="dark light">',
         f'<meta property="og:type" content="{og_type}">',
@@ -617,6 +618,8 @@ def render_base(lang: str, title: str, description: str, canonical_path: str,
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-15279420781"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-15279420781');</script>
+    <!-- IndexNow API Key -->
+    <link rel="stylesheet" href="/a0f6b5032dd63cf84271ae3ab4fcaf86.txt">
 {structured_block}
     <link rel="icon" href="/favicon.svg">
     <link rel="stylesheet" href="/css/style.css">
@@ -1647,7 +1650,7 @@ Disallow: /pagefind/
 
 Crawl-delay: 1
 
-Sitemap: {BASE_URL}sitemap-index.xml
+Sitemap: {BASE_URL}sitemap.xml
 """
 
 
