@@ -70,7 +70,7 @@ def generate_llms_txt(base_url: str, top_n: int) -> str:
     lines.append(f"- [All FAQs]({base_url}en/faq/)")
     lines.append(f"- [All Price History]({base_url}en/history/)")
     lines.append(f"- [All Alternatives]({base_url}en/alternatives/)")
-    lines.append(f"- [Sitemap Index]({base_url}sitemap-index.xml)")
+    lines.append(f"- [Sitemap Index]({base_url}sitemap.xml)")
     lines.append("")
 
     lines.append(f"## Top {len(top_tools)} AI Tools by Popularity")
