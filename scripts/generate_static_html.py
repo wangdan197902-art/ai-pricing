@@ -614,6 +614,9 @@ def render_base(lang: str, title: str, description: str, canonical_path: str,
     <meta name="generator" content="generate_static_html.py">
     <meta name="base-url" content="{BASE_URL}">
     {head_seo}
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15279420781"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-15279420781');</script>
 {structured_block}
     <link rel="icon" href="/favicon.svg">
     <link rel="stylesheet" href="/css/style.css">
