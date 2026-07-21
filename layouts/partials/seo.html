@@ -1,7 +1,7 @@
 {{/* SEO meta 标签：title / description / keywords / canonical / OG / Twitter / hreflang / robots */}}
 {{ $title := .Title | default .Site.Title }}
 {{ $description := .Description | default .Summary | default .Site.Params.description }}
-{{ $url := .Permalink }}
+{{ $url := .Permalink }}{{ if .IsHome }}{{ with .Site.Params.canonical }}{{ $url = . }}{{ end }}{{ end }}
 {{ $ogImage := .Site.Params.default_og_image | default "/images/og-default.svg" }}
 {{ with .Params.og_image }}{{ $ogImage = . }}{{ end }}
 
