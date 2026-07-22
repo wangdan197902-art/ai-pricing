@@ -1,0 +1,17 @@
+# AI Tools Pricing Hub
+
+> Compare pricing and features of 100+ AI tools across 20 languages. Find the best deals, alternatives, and money-saving tips for popular AI services like ChatGPT Plus, Claude Pro, Midjourney, GitHub Copilot, and more.
+
+## Site Overview
+- Total AI tools tracked: 100+
+- Supported languages: 20
+- Page types: tools, compare, guides, ranking, faq, history, alternatives
+- Base URL: https://pricing.ai-term-hub.com/
+
+## Important Pages
+- [Home](https://pricing.ai-term-hub.com/)
+- [All Tools](https://pricing.ai-term-hub.com/en/tools/)
+- [All Categories](https://pricing.ai-term-hub.com/en/ranking/)
+- [All Guides](https://pricing.ai-term-hub.com/en/guides/)
+- [All FAQs](https://pricing.ai-term-hub.com/en/faq/)
+- [Sitemap](https://pricing.ai-term-hub.com/sitemap.xml)
