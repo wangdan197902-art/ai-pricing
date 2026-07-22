@@ -1,0 +1,117 @@
+name: IndexNow Weekly Submit
+
+on:
+  schedule:
+    # 每周一北京时间凌晨3点（UTC 19:00 周日）
+    - cron: '0 19 * * 0'
+  workflow_dispatch:
+
+jobs:
+  indexnow-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Create IndexNow submit script
+        run: |
+          mkdir -p scripts
+          cat > scripts/indexnow_submit.py << 'EOF'
+          #!/usr/bin/env python3
+          """IndexNow 批量提交pricing域名URL"""
+
+          import json
+          import urllib.parse
+          import urllib.request
+          import concurrent.futures
+          import time
+          import sys
+
+          INDEXNOW_KEY = "a0f6b5032dd63cf84271ae3ab4fcaf86"
+          INDEXNOW_ENDPOINT = "https://api.indexnow.org/IndexNow"
+
+          MAIN_DOMAINS = [
+              "pricing.ai-term-hub.com",
+          ]
+
+          LANGS = ["ar", "cs", "da", "de", "el", "en", "es", "fi", "fr", "hu",
+                   "id", "it", "ja", "ko", "nl", "no", "pl", "pt", "ro", "ru",
+                   "sv", "tr", "vi", "zh"]
+
+          SITE_TYPES = ["pricing"]
+
+          def generate_urls():
+              urls = []
+              for domain in MAIN_DOMAINS:
+                  urls.append(f"https://{domain}/")
+              for site_type in SITE_TYPES:
+                  for lang in LANGS:
+                      urls.append(f"https://{site_type}-{lang}.ai-term-hub.com/")
+              return urls
+
+          def submit_single_url(url):
+              try:
+                  encoded_url = urllib.parse.quote(url, safe='')
+                  key_location = f"{url}{INDEXNOW_KEY}.txt"
+                  submit_url = f"{INDEXNOW_ENDPOINT}?url={encoded_url}&key={INDEXNOW_KEY}&keyLocation={urllib.parse.quote(key_location, safe='')}"
+                  req = urllib.request.Request(submit_url, method='GET')
+                  req.add_header('User-Agent', 'IndexNow-Weekly-Action/1.0')
+                  with urllib.request.urlopen(req, timeout=30) as resp:
+                      return url, resp.status, "success"
+              except Exception as e:
+                  return url, 0, str(e)
+
+          urls = generate_urls()
+          print(f"📋 待提交URL数: {len(urls)}")
+
+          results = []
+          success_count = 0
+          fail_count = 0
+
+          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+              future_to_url = {executor.submit(submit_single_url, url): url for url in urls}
+              for i, future in enumerate(concurrent.futures.as_completed(future_to_url), 1):
+                  url, status, msg = future.result()
+                  ok = status in [200, 202]
+                  if ok:
+                      success_count += 1
+                  else:
+                      fail_count += 1
+                  results.append({'url': url, 'status': status, 'message': msg, 'success': ok})
+                  print(f"[{i}/{len(urls)}] {'✅' if ok else '❌'} {url} - {status}")
+
+          print(f"\n✅ 完成: {success_count}/{len(urls)} 成功, {fail_count} 失败")
+
+          # 保存结果
+          with open('indexnow_results.json', 'w') as f:
+              json.dump({
+                  'timestamp': time.strftime('%Y%m%d_%H%M%S'),
+                  'total': len(urls),
+                  'success': success_count,
+                  'fail': fail_count,
+                  'results': results
+              }, f, indent=2)
+
+          if fail_count > 0:
+              print(f"\n❌ 失败URL列表:")
+              for r in results:
+                  if not r['success']:
+                      print(f"  - {r['url']}: {r['message']}")
+              sys.exit(1)
+          EOF
+
+      - name: Run IndexNow submit
+        run: python3 scripts/indexnow_submit.py
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-results
+          path: indexnow_results.json
+          retention-days: 30
