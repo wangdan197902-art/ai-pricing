@@ -58,6 +58,17 @@ jobs:
       - name: Generate Pagefind search index
         run: pagefind --site public/
         continue-on-error: true
+      - name: Copy static assets to public
+        run: |
+          mkdir -p public
+          if [ -d static ]; then
+            cp -r static/* public/ 2>/dev/null || true
+            echo "Copied static/* to public/"
+            ls -la public/BingSiteAuth.xml 2>/dev/null && echo "BingSiteAuth.xml OK" || echo "BingSiteAuth.xml missing"
+            ls -la public/a0f6b5032dd63cf84271ae3ab4fcaf86.txt 2>/dev/null && echo "IndexNow Key OK" || echo "IndexNow Key missing"
+          else
+            echo "static/ directory not found"
+          fi
       - name: Add .nojekyll
         run: touch public/.nojekyll
       - name: Ensure index.html
